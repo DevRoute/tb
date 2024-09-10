@@ -1,0 +1,60 @@
+// 工具栏
+#J_Toolkit {
+  .tb-toolkit {
+    position: fixed;
+    top: $topbar_height;
+    left: 0;
+    right: unset;
+    height: calc(100vh - $topbar_height);
+    transform: unset;
+    border-radius: unset;
+    background-color: $bg_color_3;
+    .tb-toolkit-list {
+      .toolkit-item {
+        border-radius: unset;
+        background-color: unset;
+        i {
+          filter: invert(100%);
+        }
+        a {
+          color: $font_color;
+        }
+      }
+      // 消息这个元素特殊处理
+      .im-entry {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: $tools_width;
+        .im-top {
+          width: 24px;
+          height: 22px;
+          img {
+            display: none;
+          }
+          &::after {
+            content: "";
+            display: block;
+            background: url("//gw.alicdn.com/imgextra/i3/O1CN01CEAqor1T5Bm2U3Ccm_!!6000000002330-2-tps-48-44.png")
+              no-repeat;
+            background-size: 100% 100%;
+            height: 100%;
+            filter: invert(100%);
+          }
+        }
+        .im-bottom {
+          color: $font_color;
+        }
+      }
+      // 回到顶部元素
+      .toolkit-item.toolkit-item-back {
+        bottom: 0;
+        &::before {
+          width: $tools_width;
+          background-color: $bg_color_3;
+        }
+      }
+    }
+  }
+}

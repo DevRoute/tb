@@ -1,0 +1,58 @@
+// 输入搜索框
+@mixin input_search_style {
+  margin: 0;
+  position: fixed;
+  top: 2px;
+  left: 25%;
+  // 搜索栏的高度
+  $input_search_height: $topbar_height - 6px;
+  .search-wrap {
+    & > .search-bd {
+      width: 750px !important;
+      height: $input_search_height;
+      // 开头搜索下拉框
+      div[data-sg-type="tab"] {
+        margin-top: unset;
+        height: 25px;
+        .search-suggest-tabs-tab {
+          height: $input_search_height;
+          line-height: $input_search_height;
+          .search-tab-icon {
+            top: 10px;
+          }
+        }
+      }
+      form[name="search"] {
+        // 搜索提示
+        div[data-sg-type="placeholder"] {
+          top: -5px;
+        }
+        // 搜索框
+        .search-suggest-combobox {
+          height: $input_search_height - 5px;
+          input {
+            height: $input_search_height - 5px;
+          }
+        }
+        // 搜索按钮
+        .search-button > .btn-search {
+          top: 0;
+          right: 0;
+          height: $input_search_height - 2px;
+        }
+      }
+      // 分割线
+      .search-suggest-split {
+        top: 8px;
+      }
+      // 相机
+      .image-search-wrapper {
+        top: 0px;
+      }
+      // 优惠词条
+      div[data-sg-type="hotWord"] {
+        display: none;
+      }
+    }
+  }
+}

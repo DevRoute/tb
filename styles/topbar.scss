@@ -1,0 +1,23 @@
+// 顶部栏
+#J_SiteNav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg_color_3;
+  border-bottom: unset;
+  .site-nav-bd {
+    display: none;
+  }
+  &::after {
+    content: "淘宝网首页.md -- 欢迎来到淘宝网";
+    display: inline-block;
+    color: $font_color;
+    font-size: $font_size;
+    text-align: center;
+  }
+  // logo
+  &::before {
+    @include logo_style;
+  }
+}

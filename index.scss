@@ -1,0 +1,44 @@
+// 顶部导航栏高度
+$topbar_height: 36px;
+// 主题基本颜色
+$base_color: #1e1e1e;
+// 主题字体颜色
+$font_color: #fff;
+// 字体大小
+$font_size: 12px;
+// 边框颜色
+$border_color: #fff;
+// 工具栏宽度
+$tools_width: 56px;
+// 分类的宽度
+$cate_width: 240px;
+// 内容的宽度
+$content_width: calc(100vw - $cate_width - $tools_width - 260px);
+// 标签栏高度
+$tab_title_height: 40px;
+
+// 计算不同的背景颜色
+@function get_bg_color($percentage: 0%) {
+  @return mix(white, $base_color, $percentage);
+}
+// 计算不同的字体颜色
+@function get_font_color($percentage: 0%) {
+  @return mix(black, $font_color, $percentage);
+}
+// 三种背景颜色
+$bg_color_1: get_bg_color();
+$bg_color_2: get_bg_color(5%);
+$bg_color_3: get_bg_color(10%);
+
+body {
+  background-color: $bg_color_3 !important;
+  position: relative;
+}
+
+@import './styles/search.scss';
+@import './styles/logo.scss';
+@import './styles/topbar.scss';
+@import './styles/tools.scss';
+@import './styles/content.scss';
+@import './styles/seoinject.scss';
+@import './styles/footer.scss';

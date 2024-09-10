@@ -1,0 +1,11 @@
+// seo区域
+div[data-spm="seoinject"] {
+  position: relative;
+  left: $tools_width + $cate_width;
+  width: $content_width !important;
+  & > .layer {
+    width: inherit;
+    background-color: $bg_color_1;
+    color: $font_color;
+  }
+}

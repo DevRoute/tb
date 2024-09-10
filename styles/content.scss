@@ -1,0 +1,229 @@
+// 主要内容
+#ice-container {
+  position: relative;
+  left: $tools_width + $cate_width;
+  background-color: $bg_color_3;
+  // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
+  &::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $topbar_height;
+    background-color: $bg_color_3;
+  }
+  & > .J_Module {
+    display: none;
+  }
+  // 活动区域
+  & > div[data-name="superbanner"] {
+    height: 0;
+  }
+  // 默认搜索
+  & > .search-decorations {
+    margin: unset;
+    width: $content_width;
+    border-radius: unset;
+    margin-top: $tab_title_height;
+    & > .top {
+      margin: unset;
+      height: $topbar_height;
+      padding: unset;
+      .top-wrap {
+        width: inherit;
+        background-color: $bg_color_1;
+        .tbh-logo,
+        a[class="logo"] {
+          display: none;
+        }
+        div[data-name="search"] {
+          .search-wrap {
+            & > .search-bd {
+              div[data-spm-ab="fline"] {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 开始时搜索栏
+  & > .search-fixed.search-decorations {
+    & > .top {
+      background-color: $bg_color_3;
+      .top-wrap {
+        padding-top: 15px;
+      }
+    }
+  }
+  // 滚动时搜索栏
+  & > .wrap-fixed.search-decorations {
+    & > .top {
+      background-color: $bg_color_3;
+      // border-bottom: 1px solid $border_color;
+      &::after {
+        @include logo_style;
+      }
+      .top-wrap {
+        div[data-name="search"] {
+          @include input_search_style;
+        }
+      }
+    }
+  }
+  // 分类这一行
+  & > .screen-outer {
+    height: 0;
+    padding-top: unset;
+    div[data-name="service"] {
+      .J_Service {
+        position: fixed;
+        top: $topbar_height;
+        left: $tools_width;
+        z-index: 220;
+        height: calc(100vh - $topbar_height);
+        max-height: unset;
+        background-color: $bg_color_2;
+        margin-left: unset;
+        border-radius: unset;
+        div[class^="cate-title"] {
+          span[class^="cate-title-txt"] {
+            color: $font_color;
+          }
+        }
+        ul[class^="service-bd"] {
+          li.J_Cat {
+            &:hover {
+              background-color: $bg_color_3;
+            }
+            div[class^="first-cate-container"] {
+              // 分类图标
+              i {
+                filter: invert(100%);
+              }
+              // 分类文字
+              a[class^="cate-content-href"] {
+                color: $font_color;
+              }
+              // 链接斜杆
+              span[class^="service-slash"] {
+                color: $font_color;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 登录这块
+    .main {
+      height: 0;
+      .main-inner {
+        .core.J_Core {
+          height: 0;
+          overflow: hidden;
+        }
+        // 右侧信息
+        .col-right {
+          position: fixed;
+          top: $topbar_height;
+          right: 0;
+          z-index: 220;
+          margin-right: unset;
+          height: calc(100vh - $topbar_height);
+          background-color: $bg_color_2;
+          .tbh-user {
+            margin: 5px;
+            border-radius: unset;
+          }
+        }
+      }
+    }
+  }
+  // 商品内容
+  & > .layer {
+    margin: unset;
+    width: $content_width;
+    overflow: hidden;
+    .layer-inner {
+      width: inherit;
+      background-color: $bg_color_1;
+      .tb-picks-container {
+        width: inherit;
+        // 商品标题
+        .smallTabListWrapper {
+          position: fixed;
+          top: $topbar_height;
+          z-index: 210;
+          width: $content_width;
+          padding: unset;
+          margin: unset;
+          height: $tab_title_height;
+          background-color: $bg_color_3;
+          .smallTabListInnerWrapper {
+            width: inherit;
+            .smallTabList {
+              padding: unset;
+              width: inherit;
+              .smallTabWrapper {
+                height: inherit;
+                background-color: $bg_color_3;
+                padding-right: 32px;
+                margin: unset;
+                .smallTabTitle {
+                  color: get_font_color(30%);
+                }
+                // 选中的样式
+                &.smallTabWrapperSelected {
+                  background-color: $bg_color_1;
+                  .smallTabTitle {
+                    color: $font_color;
+                  }
+                  &::before {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // 商品列表
+        .tb-pick-feeds-container {
+          width: inherit;
+          display: flex;
+          flex-wrap: wrap;
+          padding-top: 3px;
+          .tb-pick-content-item {
+            float: unset;
+            width: 31%;
+            height: unset;
+            aspect-ratio: 1 / 1.47;
+            background-color: $bg_color_1;
+            a {
+              .img-wrapper {
+                width: inherit;
+                height: unset;
+                aspect-ratio: 1 / 1;
+              }
+              .info-wrapper {
+                .info-wrapper-title-text {
+                  color: $font_color;
+                }
+              }
+              .hover-border {
+                width: calc(100% + 8px);
+                height: unset;
+                aspect-ratio: 1 / 1.47;
+                &:hover {
+                  border: 1px solid $border_color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

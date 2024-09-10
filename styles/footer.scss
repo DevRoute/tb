@@ -1,0 +1,28 @@
+// 网站底部
+#J_SiteFooter {
+  position: relative;
+  left: $tools_width + $cate_width;
+  width: $content_width !important;
+  .tb-footer {
+    width: inherit;
+    background-color: $bg_color_1;
+    .tb-footer-inner {
+      width: inherit;
+      div[class^="tb-footer"] {
+        span {
+          color: $font_color;
+        }
+        strong,
+        a {
+          color: get_font_color(10%);
+        }
+      }
+      // 处理logo图片，不会因为主题模糊不清
+      .tb-footer-ft {
+        img {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

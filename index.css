@@ -1,0 +1,358 @@
+@charset "UTF-8";
+body {
+  background-color: #353535 !important;
+  position: relative;
+}
+
+#J_SiteNav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #353535;
+  border-bottom: unset;
+}
+#J_SiteNav .site-nav-bd {
+  display: none;
+}
+#J_SiteNav::after {
+  content: "淘宝网首页.md -- 欢迎来到淘宝网";
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+#J_SiteNav::before {
+  content: "";
+  display: block;
+  background-image: url("https://img.alicdn.com/imgextra/i1/O1CN011YZ3P01zMCE6HGyhk_!!6000000006699-2-tps-480-144.png");
+  background-size: 100% 100%;
+  height: 36px;
+  aspect-ratio: 10/3;
+  position: absolute;
+  top: 2px;
+  left: -1rem;
+}
+
+#J_Toolkit .tb-toolkit {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  right: unset;
+  height: calc(100vh - 36px);
+  transform: unset;
+  border-radius: unset;
+  background-color: #353535;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item {
+  border-radius: unset;
+  background-color: unset;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item i {
+  filter: invert(100%);
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item a {
+  color: #fff;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 56px;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top {
+  width: 24px;
+  height: 22px;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top img {
+  display: none;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top::after {
+  content: "";
+  display: block;
+  background: url("//gw.alicdn.com/imgextra/i3/O1CN01CEAqor1T5Bm2U3Ccm_!!6000000002330-2-tps-48-44.png") no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  filter: invert(100%);
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-bottom {
+  color: #fff;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back {
+  bottom: 0;
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back::before {
+  width: 56px;
+  background-color: #353535;
+}
+
+#ice-container {
+  position: relative;
+  left: 296px;
+  background-color: #353535;
+}
+#ice-container::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 36px;
+  background-color: #353535;
+}
+#ice-container > .J_Module {
+  display: none;
+}
+#ice-container > div[data-name=superbanner] {
+  height: 0;
+}
+#ice-container > .search-decorations {
+  margin: unset;
+  width: calc(100vw - 240px - 56px - 260px);
+  border-radius: unset;
+  margin-top: 40px;
+}
+#ice-container > .search-decorations > .top {
+  margin: unset;
+  height: 36px;
+  padding: unset;
+}
+#ice-container > .search-decorations > .top .top-wrap {
+  width: inherit;
+  background-color: #1e1e1e;
+}
+#ice-container > .search-decorations > .top .top-wrap .tbh-logo,
+#ice-container > .search-decorations > .top .top-wrap a[class=logo] {
+  display: none;
+}
+#ice-container > .search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd div[data-spm-ab=fline] {
+  display: none;
+}
+#ice-container > .search-fixed.search-decorations > .top {
+  background-color: #353535;
+}
+#ice-container > .search-fixed.search-decorations > .top .top-wrap {
+  padding-top: 15px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top {
+  background-color: #353535;
+}
+#ice-container > .wrap-fixed.search-decorations > .top::after {
+  content: "";
+  display: block;
+  background-image: url("https://img.alicdn.com/imgextra/i1/O1CN011YZ3P01zMCE6HGyhk_!!6000000006699-2-tps-480-144.png");
+  background-size: 100% 100%;
+  height: 36px;
+  aspect-ratio: 10/3;
+  position: absolute;
+  top: 2px;
+  left: -1rem;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] {
+  margin: 0;
+  position: fixed;
+  top: 2px;
+  left: 25%;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd {
+  width: 750px !important;
+  height: 30px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd div[data-sg-type=tab] {
+  margin-top: unset;
+  height: 25px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd div[data-sg-type=tab] .search-suggest-tabs-tab {
+  height: 30px;
+  line-height: 30px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd div[data-sg-type=tab] .search-suggest-tabs-tab .search-tab-icon {
+  top: 10px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd form[name=search] div[data-sg-type=placeholder] {
+  top: -5px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd form[name=search] .search-suggest-combobox {
+  height: 25px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd form[name=search] .search-suggest-combobox input {
+  height: 25px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd form[name=search] .search-button > .btn-search {
+  top: 0;
+  right: 0;
+  height: 28px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd .search-suggest-split {
+  top: 8px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd .image-search-wrapper {
+  top: 0px;
+}
+#ice-container > .wrap-fixed.search-decorations > .top .top-wrap div[data-name=search] .search-wrap > .search-bd div[data-sg-type=hotWord] {
+  display: none;
+}
+#ice-container > .screen-outer {
+  height: 0;
+  padding-top: unset;
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service {
+  position: fixed;
+  top: 36px;
+  left: 56px;
+  z-index: 220;
+  height: calc(100vh - 36px);
+  max-height: unset;
+  background-color: #292929;
+  margin-left: unset;
+  border-radius: unset;
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service div[class^=cate-title] span[class^=cate-title-txt] {
+  color: #fff;
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat:hover {
+  background-color: #353535;
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat div[class^=first-cate-container] i {
+  filter: invert(100%);
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat div[class^=first-cate-container] a[class^=cate-content-href] {
+  color: #fff;
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat div[class^=first-cate-container] span[class^=service-slash] {
+  color: #fff;
+}
+#ice-container > .screen-outer .main {
+  height: 0;
+}
+#ice-container > .screen-outer .main .main-inner .core.J_Core {
+  height: 0;
+  overflow: hidden;
+}
+#ice-container > .screen-outer .main .main-inner .col-right {
+  position: fixed;
+  top: 36px;
+  right: 0;
+  z-index: 220;
+  margin-right: unset;
+  height: calc(100vh - 36px);
+  background-color: #292929;
+}
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user {
+  margin: 5px;
+  border-radius: unset;
+}
+#ice-container > .layer {
+  margin: unset;
+  width: calc(100vw - 240px - 56px - 260px);
+  overflow: hidden;
+}
+#ice-container > .layer .layer-inner {
+  width: inherit;
+  background-color: #1e1e1e;
+}
+#ice-container > .layer .layer-inner .tb-picks-container {
+  width: inherit;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper {
+  position: fixed;
+  top: 36px;
+  z-index: 210;
+  width: calc(100vw - 240px - 56px - 260px);
+  padding: unset;
+  margin: unset;
+  height: 40px;
+  background-color: #353535;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper {
+  width: inherit;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList {
+  padding: unset;
+  width: inherit;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper {
+  height: inherit;
+  background-color: #353535;
+  padding-right: 32px;
+  margin: unset;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper .smallTabTitle {
+  color: #b3b3b3;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper.smallTabWrapperSelected {
+  background-color: #1e1e1e;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper.smallTabWrapperSelected .smallTabTitle {
+  color: #fff;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper.smallTabWrapperSelected::before {
+  display: none;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container {
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3px;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item {
+  float: unset;
+  width: 31%;
+  height: unset;
+  aspect-ratio: 1/1.47;
+  background-color: #1e1e1e;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .img-wrapper {
+  width: inherit;
+  height: unset;
+  aspect-ratio: 1/1;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .info-wrapper .info-wrapper-title-text {
+  color: #fff;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .hover-border {
+  width: calc(100% + 8px);
+  height: unset;
+  aspect-ratio: 1/1.47;
+}
+#ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .hover-border:hover {
+  border: 1px solid #fff;
+}
+
+div[data-spm=seoinject] {
+  position: relative;
+  left: 296px;
+  width: calc(100vw - 240px - 56px - 260px) !important;
+}
+div[data-spm=seoinject] > .layer {
+  width: inherit;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+#J_SiteFooter {
+  position: relative;
+  left: 296px;
+  width: calc(100vw - 240px - 56px - 260px) !important;
+}
+#J_SiteFooter .tb-footer {
+  width: inherit;
+  background-color: #1e1e1e;
+}
+#J_SiteFooter .tb-footer .tb-footer-inner {
+  width: inherit;
+}
+#J_SiteFooter .tb-footer .tb-footer-inner div[class^=tb-footer] span {
+  color: #fff;
+}
+#J_SiteFooter .tb-footer .tb-footer-inner div[class^=tb-footer] strong,
+#J_SiteFooter .tb-footer .tb-footer-inner div[class^=tb-footer] a {
+  color: #e6e6e6;
+}
+#J_SiteFooter .tb-footer .tb-footer-inner .tb-footer-ft img {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map */
