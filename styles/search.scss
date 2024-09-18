@@ -3,7 +3,8 @@
   margin: 0;
   position: fixed;
   top: 2px;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   // 搜索栏的高度
   $input_search_height: $topbar_height - 6px;
   .search-wrap {

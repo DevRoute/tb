@@ -9,13 +9,13 @@ $font_size: 12px;
 // 边框颜色
 $border_color: #fff;
 // 工具栏宽度
-$tools_width: 56px;
+$tools_width: 3.5rem;
 // 分类的宽度
-$cate_width: 240px;
+$cate_width: 15rem;
 // 内容的宽度
 $content_width: calc(100vw - $cate_width - $tools_width - 260px);
 // 标签栏高度
-$tab_title_height: 40px;
+$tab_title_height: 2.5rem;
 
 // 计算不同的背景颜色
 @function get_bg_color($percentage: 0%) {
@@ -35,6 +35,7 @@ body {
   position: relative;
 }
 
+@import './styles/scrollbar.scss';
 @import './styles/search.scss';
 @import './styles/logo.scss';
 @import './styles/topbar.scss';
