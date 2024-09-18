@@ -22,7 +22,7 @@
     height: 0;
   }
   // 默认搜索
-  & > .search-decorations {
+  & > .cup.search-fixed {
     margin: unset;
     width: $content_width;
     border-radius: unset;
@@ -34,15 +34,23 @@
       .top-wrap {
         width: inherit;
         background-color: $bg_color_1;
+        padding-top: 15px;
         .tbh-logo,
         a[class="logo"] {
           display: none;
         }
-        div[data-name="search"] {
-          .search-wrap {
-            & > .search-bd {
-              div[data-spm-ab="fline"] {
-                display: none;
+        .tbh-search {
+          margin: auto;
+          width: 440px;
+          #J_Search {
+            z-index: 200;
+            div[data-name="search"] {
+              .search-wrap {
+                & > .search-bd {
+                  div[data-spm-ab="fline"] {
+                    display: none;
+                  }
+                }
               }
             }
           }
@@ -60,9 +68,12 @@
     }
   }
   // 滚动时搜索栏
-  & > .wrap-fixed.search-decorations {
+  & > .wrap-fixed.search-decorations,
+  & > .cup.wrap-fixed {
     & > .top {
       background-color: $bg_color_3;
+      height: $topbar_height;
+      padding: unset;
       // border-bottom: 1px solid $border_color;
       &::after {
         @include logo_style;
@@ -70,6 +81,9 @@
       .top-wrap {
         div[data-name="search"] {
           @include input_search_style;
+        }
+        .tbh-logo {
+          display: none;
         }
       }
     }
@@ -96,6 +110,8 @@
         }
         ul[class^="service-bd"] {
           li.J_Cat {
+            margin: unset;
+            padding-left: 16px;
             &:hover {
               background-color: $bg_color_3;
             }
@@ -112,6 +128,42 @@
               span[class^="service-slash"] {
                 color: $font_color;
               }
+            }
+            // 悬停弹出分类这块
+            & > div[class^="sec-cate--"] {
+              top: $tab_title_height;
+              left: $cate_width;
+              width: $content_width;
+              z-index: 230;
+              & > div[class^="sec-cate-container--"] {
+                width: calc(100% - 8px) !important;
+                background-color: $bg_color_1;
+                & > div[class^="sec-cate-container-scroll--"] {
+                  max-height: calc(100vh - $tab_title_height - $topbar_height);
+                  & > div[class^="cate-links-container"] {
+                    // 填充底部
+                    &::after {
+                      content: "";
+                      display: block;
+                      height: 36px;
+                    }
+                    // 标题字体
+                    [class^="sec-cate-title-container-a--"] {
+                      color: $font_color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          // 链接字体
+          a {
+            color: $font_color;
+            &:hover {
+              color: var(--tbpc-primary-theme-color);
+            }
+            div[class^="brand--"]:hover {
+              background-color: var(--tbpc-bg2-color);
             }
           }
         }
@@ -198,6 +250,8 @@
           .tb-pick-content-item {
             float: unset;
             width: 31%;
+            min-width: 240px;
+            max-width: 320px;
             height: unset;
             aspect-ratio: 1 / 1.47;
             background-color: $bg_color_1;

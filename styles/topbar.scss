@@ -7,15 +7,51 @@
   background-color: $bg_color_3;
   border-bottom: unset;
   .site-nav-bd {
-    display: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: unset;
+    width: calc(100vw - ($topbar_height * 3.3));
+    margin-left: $topbar_height * 3.3;
+    .site-nav-bd-l,
+    .site-nav-bd-r {
+      flex: 1;
+      color: $font_color;
+      li {
+        &.site-nav-menu-hover {
+          .site-nav-menu-hd {
+            border: 0;
+            background-color: $bg_color_1;
+          }
+        }
+        .site-nav-menu-hd {
+          background-color: transparent;
+          box-sizing: border-box;
+          // border: 1px solid $border_color;
+        }
+        .site-nav-menu-bd-panel {
+          border: 0;
+          background-color: $bg_color_1;
+          .site-nav-region-item:hover,
+          a:hover {
+            background: $bg_color_2;
+          }
+        }
+      }
+    }
+    .site-nav-bd-r {
+      display: flex;
+      justify-content: flex-end;
+    }
+    // &::before {
+    //   content: "淘宝网首页.md -- 欢迎来到淘宝网";
+    //   display: inline-block;
+    //   color: $font_color;
+    //   font-size: $font_size;
+    //   text-align: center;
+    // }
   }
-  &::after {
-    content: "淘宝网首页.md -- 欢迎来到淘宝网";
-    display: inline-block;
-    color: $font_color;
-    font-size: $font_size;
-    text-align: center;
-  }
+  
   // logo
   &::before {
     @include logo_style;
