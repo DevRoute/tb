@@ -17,6 +17,7 @@
     .site-nav-bd-r {
       flex: 1;
       color: $font_color;
+      font-size: $font_size;
       li {
         &.site-nav-menu-hover {
           .site-nav-menu-hd {
@@ -27,7 +28,6 @@
         .site-nav-menu-hd {
           background-color: transparent;
           box-sizing: border-box;
-          // border: 1px solid $border_color;
         }
         .site-nav-menu-bd-panel {
           border: 0;

@@ -41,7 +41,7 @@
         }
         .tbh-search {
           margin: auto;
-          width: 440px;
+          width: 35rem;
           #J_Search {
             z-index: 200;
             div[data-name="search"] {
@@ -207,7 +207,8 @@
         // 商品标题
         .smallTabListWrapper {
           position: fixed;
-          top: $topbar_height;
+          top: $topbar_height !important;
+          left: $tools_width + $cate_width;
           z-index: 210;
           width: $content_width;
           padding: unset;
@@ -219,6 +220,7 @@
             .smallTabList {
               padding: unset;
               width: inherit;
+              overflow-x: auto;
               .smallTabWrapper {
                 height: inherit;
                 background-color: $bg_color_3;
@@ -247,11 +249,16 @@
           display: flex;
           flex-wrap: wrap;
           padding-top: 3px;
+          padding-left: 15px;
+          padding-right: 15px;
+          box-sizing: border-box;
+          gap: 16px;
           .tb-pick-content-item {
             float: unset;
-            width: 31%;
-            min-width: 240px;
-            max-width: 320px;
+            flex: 1;
+            margin: auto;
+            min-width: 200px;
+            max-width: 240px;
             height: unset;
             aspect-ratio: 1 / 1.47;
             background-color: $bg_color_1;
@@ -268,8 +275,7 @@
               }
               .hover-border {
                 width: calc(100% + 8px);
-                height: unset;
-                aspect-ratio: 1 / 1.47;
+                height: calc(100% + 8px);
                 &:hover {
                   border: 1px solid $border_color;
                 }

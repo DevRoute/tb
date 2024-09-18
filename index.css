@@ -1,6 +1,41 @@
+@charset "UTF-8";
 body {
   background-color: #353535 !important;
   position: relative;
+}
+
+/* 针对整个滚动条的样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: #353535;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* 通常不显示按钮 */
+}
+
+/* 滚动条两端（或上下）的指示器 */
+::-webkit-scrollbar-corner {
+  background: #d2d2d2;
+}
+
+/* 当鼠标悬停在滑块上时改变滑块样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bcbcbc;
 }
 
 #J_SiteNav {
@@ -23,6 +58,7 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-bd-r {
   flex: 1;
   color: #fff;
+  font-size: 12px;
 }
 #J_SiteNav .site-nav-bd .site-nav-bd-l li.site-nav-menu-hover .site-nav-menu-hd,
 #J_SiteNav .site-nav-bd .site-nav-bd-r li.site-nav-menu-hover .site-nav-menu-hd {
@@ -86,7 +122,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 56px;
+  width: 3.5rem;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top {
   width: 24px;
@@ -110,13 +146,13 @@ body {
   bottom: 0;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back::before {
-  width: 56px;
+  width: 3.5rem;
   background-color: #353535;
 }
 
 #ice-container {
   position: relative;
-  left: 296px;
+  left: 18.5rem;
   background-color: #353535;
 }
 #ice-container::after {
@@ -137,9 +173,9 @@ body {
 }
 #ice-container > .cup.search-fixed {
   margin: unset;
-  width: calc(100vw - 240px - 56px - 260px);
+  width: calc(100vw - 15rem - 3.5rem - 260px);
   border-radius: unset;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 #ice-container > .cup.search-fixed > .top {
   margin: unset;
@@ -157,7 +193,7 @@ body {
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search {
   margin: auto;
-  width: 440px;
+  width: 35rem;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search {
   z-index: 200;
@@ -242,7 +278,7 @@ body {
 #ice-container > .screen-outer div[data-name=service] .J_Service {
   position: fixed;
   top: 36px;
-  left: 56px;
+  left: 3.5rem;
   z-index: 220;
   height: calc(100vh - 36px);
   max-height: unset;
@@ -270,9 +306,9 @@ body {
   color: #fff;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] {
-  top: 40px;
-  left: 240px;
-  width: calc(100vw - 240px - 56px - 260px);
+  top: 2.5rem;
+  left: 15rem;
+  width: calc(100vw - 15rem - 3.5rem - 260px);
   z-index: 230;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] {
@@ -280,7 +316,7 @@ body {
   background-color: #1e1e1e;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] > div[class^=sec-cate-container-scroll--] {
-  max-height: calc(100vh - 40px - 36px);
+  max-height: calc(100vh - 2.5rem - 36px);
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] > div[class^=sec-cate-container-scroll--] > div[class^=cate-links-container]::after {
   content: "";
@@ -321,7 +357,7 @@ body {
 }
 #ice-container > .layer {
   margin: unset;
-  width: calc(100vw - 240px - 56px - 260px);
+  width: calc(100vw - 15rem - 3.5rem - 260px);
   overflow: hidden;
 }
 #ice-container > .layer .layer-inner {
@@ -333,12 +369,13 @@ body {
 }
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper {
   position: fixed;
-  top: 36px;
+  top: 36px !important;
+  left: 18.5rem;
   z-index: 210;
-  width: calc(100vw - 240px - 56px - 260px);
+  width: calc(100vw - 15rem - 3.5rem - 260px);
   padding: unset;
   margin: unset;
-  height: 40px;
+  height: 2.5rem;
   background-color: #353535;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper {
@@ -347,6 +384,7 @@ body {
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList {
   padding: unset;
   width: inherit;
+  overflow-x: auto;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper .smallTabList .smallTabWrapper {
   height: inherit;
@@ -371,12 +409,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding-top: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  gap: 16px;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item {
   float: unset;
-  width: 31%;
-  min-width: 240px;
-  max-width: 320px;
+  flex: 1;
+  margin: auto;
+  min-width: 200px;
+  max-width: 240px;
   height: unset;
   aspect-ratio: 1/1.47;
   background-color: #1e1e1e;
@@ -391,8 +434,7 @@ body {
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .hover-border {
   width: calc(100% + 8px);
-  height: unset;
-  aspect-ratio: 1/1.47;
+  height: calc(100% + 8px);
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .hover-border:hover {
   border: 1px solid #fff;
@@ -400,8 +442,8 @@ body {
 
 div[data-spm=seoinject] {
   position: relative;
-  left: 296px;
-  width: calc(100vw - 240px - 56px - 260px) !important;
+  left: 18.5rem;
+  width: calc(100vw - 15rem - 3.5rem - 260px) !important;
 }
 div[data-spm=seoinject] > .layer {
   width: inherit;
@@ -411,8 +453,8 @@ div[data-spm=seoinject] > .layer {
 
 #J_SiteFooter {
   position: relative;
-  left: 296px;
-  width: calc(100vw - 240px - 56px - 260px) !important;
+  left: 18.5rem;
+  width: calc(100vw - 15rem - 3.5rem - 260px) !important;
 }
 #J_SiteFooter .tb-footer {
   width: inherit;
