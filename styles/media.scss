@@ -1,0 +1,131 @@
+@media (max-width: 1400px) {
+  // 关于左侧边栏的媒体查询
+  html:root {
+    --cate-width: 0rem;
+    --login-width: 0rem;
+  }
+  #J_Toolkit {
+    .tb-toolkit {
+      top: calc($topbar_height + $tools_item_height);
+      // 回到顶部元素
+      .tb-toolkit-list .toolkit-item.toolkit-item-back {
+        bottom: $tools_item_height;
+      }
+    }
+  }
+  #ice-container .screen-outer div[data-name="service"] {
+    .J_Service {
+      position: fixed;
+      top: $topbar_height;
+      left: 0;
+      width: $tools_width;
+      height: $tools_item_height;
+      min-height: unset !important;
+      background-color: $bg_color_3;
+      // border-radius: 50%;
+      transition: 0.7s all;
+      z-index: 1000;
+      & > div[class^="cate-title--"] {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: $tools_width;
+        padding: unset;
+        span[class^="cate-title-txt--"] {
+          flex: 1;
+        }
+        span[class^="cate-title-icon--"] {
+          filter: invert(100%);
+        }
+      }
+      & > ul[class^="service-bd"] {
+        display: none;
+        li.J_Cat > div[class^="sec-cate--"] {
+          left: $cate_width;
+        }
+      }
+      &:hover > ul[class^="service-bd"] {
+        display: block;
+        width: $cate_width;
+        position: absolute;
+        top: 0;
+        left: $tools_width;
+        overflow: unset;
+      }
+    }
+  }
+
+  // 关于右侧边栏的媒体查询
+  #ice-container .screen-outer {
+    .main .main-inner .col-right {
+      right: 1.6rem;
+      top: unset;
+      bottom: $tools_width;
+      width: $tools_width;
+      height: $tools_width;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 2px solid $border_color;
+      box-sizing: border-box;
+      & > div[data-spm="user"] {
+        padding: unset;
+        margin: unset;
+        width: inherit;
+        height: inherit;
+        .user {
+          .J_UserMemberWrap {
+            margin: unset;
+            .avatar-wrapper {
+              float: unset;
+              width: $tools_width;
+              height: $tools_width;
+              .J_UserMemberHome {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: inherit;
+                height: inherit;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        border-radius: unset;
+        overflow: unset;
+        width: unset;
+        height: calc(100vh - $topbar_height);
+        right: 0;
+        top: $topbar_height;
+        padding: 5px;
+        border: unset;
+        & > div[data-spm="user"] {
+          width: $login_width;
+          height: $login_height;
+          padding: 12px;
+          .user {
+            .J_UserMemberWrap {
+              margin: 0 4px;
+              .avatar-wrapper {
+                width: $tools_width;
+                float: left;
+                height: $tools_width;
+                .J_UserMemberHome {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: inherit;
+                  height: inherit;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

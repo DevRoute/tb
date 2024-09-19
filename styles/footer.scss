@@ -1,7 +1,7 @@
 // 网站底部
 #J_SiteFooter {
   position: relative;
-  left: $tools_width + $cate_width;
+  left: calc($tools_width + var(--cate-width));
   width: $content_width !important;
   .tb-footer {
     width: inherit;
