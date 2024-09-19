@@ -1,4 +1,9 @@
 @charset "UTF-8";
+html:root {
+  --cate-width: 15rem;
+  --login-width: 16rem;
+}
+
 body {
   background-color: #353535 !important;
   position: relative;
@@ -56,7 +61,6 @@ body {
 }
 #J_SiteNav .site-nav-bd .site-nav-bd-l,
 #J_SiteNav .site-nav-bd .site-nav-bd-r {
-  flex: 1;
   color: #fff;
   font-size: 12px;
 }
@@ -82,8 +86,16 @@ body {
   background: #292929;
 }
 #J_SiteNav .site-nav-bd .site-nav-bd-r {
+  flex: 1;
   display: flex;
   justify-content: flex-end;
+}
+#J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-menu-hd {
+  display: flex;
+  overflow: hidden;
+}
+#J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-menu-hd a {
+  float: unset;
 }
 #J_SiteNav::before {
   content: "";
@@ -152,7 +164,7 @@ body {
 
 #ice-container {
   position: relative;
-  left: 18.5rem;
+  left: calc(3.5rem + var(--cate-width));
   background-color: #353535;
 }
 #ice-container::after {
@@ -165,15 +177,15 @@ body {
   height: 36px;
   background-color: #353535;
 }
-#ice-container > .J_Module {
-  display: none;
-}
-#ice-container > div[data-name=superbanner] {
-  height: 0;
+#ice-container > .J_Module, #ice-container > div[data-name=superbanner] {
+  left: calc(0px - (var(--cate-width) + 3.5rem));
+  top: 41px;
+  width: 100vw;
+  z-index: 200;
 }
 #ice-container > .cup.search-fixed {
   margin: unset;
-  width: calc(100vw - 15rem - 3.5rem - 260px);
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   border-radius: unset;
   margin-top: 2.5rem;
 }
@@ -289,6 +301,14 @@ body {
 #ice-container > .screen-outer div[data-name=service] .J_Service div[class^=cate-title] span[class^=cate-title-txt] {
   color: #fff;
 }
+#ice-container > .screen-outer div[data-name=service] .J_Service div[class^=cate-title] span[class^=cate-title-icon--] {
+  filter: invert(100%);
+}
+#ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] {
+  width: var(--cate-width);
+  overflow: hidden;
+  background-color: #292929;
+}
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat {
   margin: unset;
   padding-left: 16px;
@@ -307,8 +327,8 @@ body {
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] {
   top: 2.5rem;
-  left: 15rem;
-  width: calc(100vw - 15rem - 3.5rem - 260px);
+  left: var(--cate-width);
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   z-index: 230;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] {
@@ -350,6 +370,7 @@ body {
   margin-right: unset;
   height: calc(100vh - 36px);
   background-color: #292929;
+  overflow: auto;
 }
 #ice-container > .screen-outer .main .main-inner .col-right .tbh-user {
   margin: 5px;
@@ -357,7 +378,7 @@ body {
 }
 #ice-container > .layer {
   margin: unset;
-  width: calc(100vw - 15rem - 3.5rem - 260px);
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   overflow: hidden;
 }
 #ice-container > .layer .layer-inner {
@@ -370,9 +391,9 @@ body {
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper {
   position: fixed;
   top: 36px !important;
-  left: 18.5rem;
+  left: calc(3.5rem + var(--cate-width));
   z-index: 210;
-  width: calc(100vw - 15rem - 3.5rem - 260px);
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   padding: unset;
   margin: unset;
   height: 2.5rem;
@@ -408,9 +429,7 @@ body {
   width: inherit;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 3px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 5px 15px;
   box-sizing: border-box;
   gap: 16px;
 }
@@ -442,8 +461,8 @@ body {
 
 div[data-spm=seoinject] {
   position: relative;
-  left: 18.5rem;
-  width: calc(100vw - 15rem - 3.5rem - 260px) !important;
+  left: calc(3.5rem + var(--cate-width));
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width)) !important;
 }
 div[data-spm=seoinject] > .layer {
   width: inherit;
@@ -453,8 +472,8 @@ div[data-spm=seoinject] > .layer {
 
 #J_SiteFooter {
   position: relative;
-  left: 18.5rem;
-  width: calc(100vw - 15rem - 3.5rem - 260px) !important;
+  left: calc(3.5rem + var(--cate-width));
+  width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width)) !important;
 }
 #J_SiteFooter .tb-footer {
   width: inherit;
@@ -472,6 +491,123 @@ div[data-spm=seoinject] > .layer {
 }
 #J_SiteFooter .tb-footer .tb-footer-inner .tb-footer-ft img {
   background-color: #fff;
+}
+
+@media (max-width: 1400px) {
+  html:root {
+    --cate-width: 0rem;
+    --login-width: 0rem;
+  }
+  #J_Toolkit .tb-toolkit {
+    top: calc(36px + 3.2rem);
+  }
+  #J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back {
+    bottom: 3.2rem;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    width: 3.5rem;
+    height: 3.2rem;
+    min-height: unset !important;
+    background-color: #353535;
+    transition: 0.7s all;
+    z-index: 1000;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--] {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 3.5rem;
+    padding: unset;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--] span[class^=cate-title-txt--] {
+    flex: 1;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--] span[class^=cate-title-icon--] {
+    filter: invert(100%);
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service > ul[class^=service-bd] {
+    display: none;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service > ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] {
+    left: 15rem;
+  }
+  #ice-container .screen-outer div[data-name=service] .J_Service:hover > ul[class^=service-bd] {
+    display: block;
+    width: 15rem;
+    position: absolute;
+    top: 0;
+    left: 3.5rem;
+    overflow: unset;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right {
+    right: 1.6rem;
+    top: unset;
+    bottom: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] {
+    padding: unset;
+    margin: unset;
+    width: inherit;
+    height: inherit;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] .user .J_UserMemberWrap {
+    margin: unset;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper {
+    float: unset;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper .J_UserMemberHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right:hover {
+    border-radius: unset;
+    overflow: unset;
+    width: unset;
+    height: calc(100vh - 36px);
+    right: 0;
+    top: 36px;
+    padding: 5px;
+    border: unset;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right:hover > div[data-spm=user] {
+    width: 16rem;
+    height: 25rem;
+    padding: 12px;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right:hover > div[data-spm=user] .user .J_UserMemberWrap {
+    margin: 0 4px;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right:hover > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper {
+    width: 3.5rem;
+    float: left;
+    height: 3.5rem;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right:hover > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper .J_UserMemberHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

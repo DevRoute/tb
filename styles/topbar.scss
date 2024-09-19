@@ -15,7 +15,6 @@
     margin-left: $topbar_height * 3.3;
     .site-nav-bd-l,
     .site-nav-bd-r {
-      flex: 1;
       color: $font_color;
       font-size: $font_size;
       li {
@@ -40,18 +39,18 @@
       }
     }
     .site-nav-bd-r {
+      flex: 1;
       display: flex;
       justify-content: flex-end;
+      .site-nav-menu-hd {
+        display: flex;
+        overflow: hidden;
+        a {
+          float: unset;
+        }
+      }
     }
-    // &::before {
-    //   content: "淘宝网首页.md -- 欢迎来到淘宝网";
-    //   display: inline-block;
-    //   color: $font_color;
-    //   font-size: $font_size;
-    //   text-align: center;
-    // }
   }
-  
   // logo
   &::before {
     @include logo_style;

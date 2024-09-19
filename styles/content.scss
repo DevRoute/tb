@@ -1,7 +1,7 @@
 // 主要内容
 #ice-container {
   position: relative;
-  left: $tools_width + $cate_width;
+  left: calc($tools_width + var(--cate-width));
   background-color: $bg_color_3;
   // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
   &::after {
@@ -14,12 +14,13 @@
     height: $topbar_height;
     background-color: $bg_color_3;
   }
-  & > .J_Module {
-    display: none;
-  }
-  // 活动区域
+  // 活动横幅
+  & > .J_Module,
   & > div[data-name="superbanner"] {
-    height: 0;
+    left: calc(0px - (var(--cate-width) + $tools_width));
+    top: $topbar_height + 5px;
+    width: 100vw;
+    z-index: 200;
   }
   // 默认搜索
   & > .cup.search-fixed {
@@ -107,8 +108,14 @@
           span[class^="cate-title-txt"] {
             color: $font_color;
           }
+          span[class^="cate-title-icon--"] {
+            filter: invert(100%);
+          }
         }
         ul[class^="service-bd"] {
+          width: var(--cate-width);
+          overflow: hidden;
+          background-color: $bg_color_2;
           li.J_Cat {
             margin: unset;
             padding-left: 16px;
@@ -132,7 +139,7 @@
             // 悬停弹出分类这块
             & > div[class^="sec-cate--"] {
               top: $tab_title_height;
-              left: $cate_width;
+              left: var(--cate-width);
               width: $content_width;
               z-index: 230;
               & > div[class^="sec-cate-container--"] {
@@ -186,6 +193,7 @@
           margin-right: unset;
           height: calc(100vh - $topbar_height);
           background-color: $bg_color_2;
+          overflow: auto;
           .tbh-user {
             margin: 5px;
             border-radius: unset;
@@ -208,7 +216,7 @@
         .smallTabListWrapper {
           position: fixed;
           top: $topbar_height !important;
-          left: $tools_width + $cate_width;
+          left: calc($tools_width + var(--cate-width));
           z-index: 210;
           width: $content_width;
           padding: unset;
@@ -248,9 +256,7 @@
           width: inherit;
           display: flex;
           flex-wrap: wrap;
-          padding-top: 3px;
-          padding-left: 15px;
-          padding-right: 15px;
+          padding: 5px 15px;
           box-sizing: border-box;
           gap: 16px;
           .tb-pick-content-item {

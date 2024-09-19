@@ -1,7 +1,7 @@
 // seo区域
 div[data-spm="seoinject"] {
   position: relative;
-  left: $tools_width + $cate_width;
+  left: calc($tools_width + var(--cate-width));
   width: $content_width !important;
   & > .layer {
     width: inherit;
