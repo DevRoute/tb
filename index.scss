@@ -38,6 +38,8 @@ $bg_color_3: get_bg_color(10%);
 html:root {
   --cate-width: #{$cate_width};
   --login-width: #{$login_width};
+  // 淘宝自身的css变量
+  --tbpc-primary-theme-color: #4a8dd6 !important;
 }
 body {
   background-color: $bg_color_3 !important;

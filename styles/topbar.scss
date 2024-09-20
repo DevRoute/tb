@@ -38,6 +38,16 @@
         }
       }
     }
+    .site-nav-bd-l {
+      .site-nav-user-info {
+        * {
+          color: get_font_color(30%);
+          :hover {
+            color: var(--tbpc-primary-theme-color);
+          }
+        }
+      }
+    }
     .site-nav-bd-r {
       flex: 1;
       display: flex;
@@ -48,6 +58,11 @@
         a {
           float: unset;
         }
+      }
+    }
+    .site-nav-menu-hd {
+      a {
+        color: get_font_color(30%);
       }
     }
   }

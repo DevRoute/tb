@@ -2,6 +2,7 @@
 html:root {
   --cate-width: 15rem;
   --login-width: 16rem;
+  --tbpc-primary-theme-color: #4a8dd6 !important;
 }
 
 body {
@@ -85,6 +86,12 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-bd-r li .site-nav-menu-bd-panel a:hover {
   background: #292929;
 }
+#J_SiteNav .site-nav-bd .site-nav-bd-l .site-nav-user-info * {
+  color: #b3b3b3;
+}
+#J_SiteNav .site-nav-bd .site-nav-bd-l .site-nav-user-info * :hover {
+  color: var(--tbpc-primary-theme-color);
+}
 #J_SiteNav .site-nav-bd .site-nav-bd-r {
   flex: 1;
   display: flex;
@@ -96,6 +103,9 @@ body {
 }
 #J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-menu-hd a {
   float: unset;
+}
+#J_SiteNav .site-nav-bd .site-nav-menu-hd a {
+  color: #b3b3b3;
 }
 #J_SiteNav::before {
   content: "";
@@ -320,10 +330,10 @@ body {
   filter: invert(100%);
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat div[class^=first-cate-container] a[class^=cate-content-href] {
-  color: #fff;
+  color: #b3b3b3;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat div[class^=first-cate-container] span[class^=service-slash] {
-  color: #fff;
+  color: #b3b3b3;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] {
   top: 2.5rem;
@@ -344,10 +354,10 @@ body {
   height: 36px;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] > div[class^=sec-cate-container-scroll--] > div[class^=cate-links-container] [class^=sec-cate-title-container-a--] {
-  color: #fff;
+  color: #b3b3b3;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] a {
-  color: #fff;
+  color: #b3b3b3;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] a:hover {
   color: var(--tbpc-primary-theme-color);
@@ -375,6 +385,22 @@ body {
 #ice-container > .screen-outer .main .main-inner .col-right .tbh-user {
   margin: 5px;
   border-radius: unset;
+  background-color: #292929;
+}
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user a.mytao-collectitem {
+  color: #b3b3b3;
+}
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user a.mytao-collectitem p {
+  color: inherit;
+}
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user a.mytao-collectitem:hover p,
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user a.mytao-collectitem:hover span {
+  color: var(--tbpc-primary-theme-color);
+}
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user strong,
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user div[class^=login-guide-],
+#ice-container > .screen-outer .main .main-inner .col-right .tbh-user .user-externalLink-item-text {
+  color: #b3b3b3;
 }
 #ice-container > .layer {
   margin: unset;

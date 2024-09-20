@@ -129,11 +129,11 @@
               }
               // 分类文字
               a[class^="cate-content-href"] {
-                color: $font_color;
+                color: get_font_color(30%);
               }
               // 链接斜杆
               span[class^="service-slash"] {
-                color: $font_color;
+                color: get_font_color(30%);
               }
             }
             // 悬停弹出分类这块
@@ -156,7 +156,7 @@
                     }
                     // 标题字体
                     [class^="sec-cate-title-container-a--"] {
-                      color: $font_color;
+                      color: get_font_color(30%);
                     }
                   }
                 }
@@ -165,7 +165,7 @@
           }
           // 链接字体
           a {
-            color: $font_color;
+            color: get_font_color(30%);
             &:hover {
               color: var(--tbpc-primary-theme-color);
             }
@@ -197,6 +197,24 @@
           .tbh-user {
             margin: 5px;
             border-radius: unset;
+            background-color: $bg_color_2;
+            a.mytao-collectitem {
+              color: get_font_color(30%);
+              p {
+                color: inherit;
+              }
+              &:hover {
+                p,
+                span {
+                  color: var(--tbpc-primary-theme-color);
+                }
+              }
+            }
+            strong,
+            div[class^="login-guide-"],
+            .user-externalLink-item-text {
+              color: get_font_color(30%);
+            }
           }
         }
       }
