@@ -144,6 +144,11 @@
                 background-color: $bg_color_3;
                 border: unset;
                 border-radius: unset;
+                .search-suggest-menu-header {
+                  .search-suggest-menu-history-item {
+                    background-color: $bg_color_2;
+                  }
+                }
                 * {
                   color: $font_color;
                 }

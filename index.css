@@ -110,7 +110,8 @@ body {
   color: #fff;
 }
 
-.site-nav.site-nav-status-login::after {
+.site-nav.site-nav-status-login::after,
+.site-nav.site-nav-status-logout::after {
   content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
   color: #b3b3b3;
 }
@@ -264,6 +265,9 @@ body {
   background-color: #353535;
   border: unset;
   border-radius: unset;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup .search-suggest-menu .search-suggest-menu-header .search-suggest-menu-history-item {
+  background-color: #292929;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup .search-suggest-menu * {
   color: #fff;
