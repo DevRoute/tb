@@ -843,10 +843,11 @@ div[data-spm=seoinject] > .layer {
   #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--]::after {
     content: "";
     display: block;
-    background: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01Wqh2b31dMj9Hx0nYt_!!3558723722-2-tblife2_ugc.png") no-repeat;
+    background: url("https://img.alicdn.com/imgextra/i4/3558723722/O1CN01rKRSsj1dMj9K79pVV_!!3558723722-2-tblife2_ugc.png") no-repeat;
     background-size: 100% 100%;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+    transform: scale(0.7);
     filter: invert(50%);
   }
   #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--] span[class^=cate-title-txt--] {
