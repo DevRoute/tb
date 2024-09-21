@@ -218,7 +218,7 @@ body {
   margin: unset;
   height: 36px;
   padding: unset;
-  height: 16.5rem;
+  height: 16.7rem;
   background-color: #292929;
 }
 #ice-container > .cup.search-fixed > .top::after {
@@ -256,7 +256,7 @@ body {
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup {
   display: block !important;
-  left: calc((100vw - var(--cate-width) - 3.5rem - var(--login-width) - 35rem) / 2 * -1) !important;
+  left: calc((100vw - var(--cate-width) - 3.5rem - var(--login-width) - 35rem) / -2) !important;
   top: 70px !important;
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
 }

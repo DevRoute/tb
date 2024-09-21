@@ -101,7 +101,7 @@
       margin: unset;
       height: $topbar_height;
       padding: unset;
-      height: 16.5rem;
+      height: 16.7rem;
       background-color: $bg_color_2;
       // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
       &::after {
@@ -137,7 +137,7 @@
             width: 35rem !important;
             & > .search-suggest-popup {
               display: block !important;
-              left: calc((($content_width - 35rem) / 2) * -1) !important;
+              left: calc(($content_width - 35rem) / -2) !important;
               top: 70px !important;
               width: $content_width;
               .search-suggest-menu {
