@@ -87,6 +87,7 @@
       border-radius: 50%;
       border: 2px solid $border_color;
       box-sizing: border-box;
+      z-index: 1001;
       &::before {
         display: none;
       }
@@ -148,8 +149,5 @@
         }
       }
     }
-  }
-  #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup{
-    // left: -25rem !important;
   }
 }

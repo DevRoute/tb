@@ -841,6 +841,7 @@ div[data-spm=seoinject] > .layer {
     border-radius: 50%;
     border: 2px solid #fff;
     box-sizing: border-box;
+    z-index: 1001;
   }
   #ice-container .screen-outer .main .main-inner .col-right::before {
     display: none;
