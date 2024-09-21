@@ -7,12 +7,13 @@
   background-color: $bg_color_3;
   border-bottom: unset;
   .site-nav-bd {
-    background-color: transparent;
+    background-color: var(--tbpc-primary-theme-color);;
     display: flex;
     justify-content: space-between;
     margin: unset;
-    width: calc(100vw - ($topbar_height * 3.3));
-    margin-left: $topbar_height * 3.3;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     .site-nav-bd-l,
     .site-nav-bd-r {
       color: $font_color;
@@ -31,6 +32,7 @@
         .site-nav-menu-bd-panel {
           border: 0;
           background-color: $bg_color_1;
+          transform: translateY(calc(5px - 100% - $topbar_height));
           .site-nav-region-item:hover,
           a:hover {
             background: $bg_color_2;
@@ -41,7 +43,7 @@
     .site-nav-bd-l {
       .site-nav-user-info {
         * {
-          color: get_font_color(30%);
+          color: $font_color;
           :hover {
             color: var(--tbpc-primary-theme-color);
           }
@@ -62,12 +64,14 @@
     }
     .site-nav-menu-hd {
       a {
-        color: get_font_color(30%);
+        color: $font_color;
       }
     }
   }
-  // logo
-  &::before {
-    @include logo_style;
+}
+.site-nav.site-nav-status-login {
+  &::after {
+    content: '淘宝网首页.md -- 欢迎来到淘宝网之VScode版';
+    color: get_font_color(30%);
   }
 }
