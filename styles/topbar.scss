@@ -68,10 +68,6 @@
       }
     }
   }
-  // logo
-  &::before {
-    @include logo_style;
-  }
 }
 .site-nav.site-nav-status-login {
   &::after {

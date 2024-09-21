@@ -22,7 +22,7 @@
       height: $tools_item_height;
       min-height: unset !important;
       background-color: $bg_color_3;
-      z-index: 1000;
+      z-index: 1001;
       &::before {
         display: none;
       }
@@ -38,6 +38,15 @@
         &::before {
           display: none;
         }
+        &::after {
+          content: "";
+          display: block;
+          background: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01O2MJd41dMj9CaLAGP_!!3558723722-2-tblife2_ugc.png")
+            no-repeat;
+          background-size: 100% 100%;
+          width: 30px;
+          height: 30px;
+        }
         span[class^="cate-title-txt--"] {
           flex: 1;
           &::before {
@@ -50,6 +59,7 @@
       }
       & > ul[class^="service-bd"] {
         display: none;
+        height: calc(100vh - $topbar_height);
         li.J_Cat > div[class^="sec-cate--"] {
           left: $cate_width;
         }
@@ -77,6 +87,9 @@
       border-radius: 50%;
       border: 2px solid $border_color;
       box-sizing: border-box;
+      &::before {
+        display: none;
+      }
       & > div[data-spm="user"] {
         padding: unset;
         margin: unset;
@@ -135,5 +148,8 @@
         }
       }
     }
+  }
+  #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup{
+    // left: -25rem !important;
   }
 }

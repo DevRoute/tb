@@ -109,17 +109,6 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-menu-hd a {
   color: #fff;
 }
-#J_SiteNav::before {
-  content: "";
-  display: block;
-  background-image: url("https://img.alicdn.com/imgextra/i1/O1CN011YZ3P01zMCE6HGyhk_!!6000000006699-2-tps-480-144.png");
-  background-size: 100% 100%;
-  height: 36px;
-  aspect-ratio: 10/3;
-  position: absolute;
-  top: 2px;
-  left: -1rem;
-}
 
 .site-nav.site-nav-status-login::after {
   content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
@@ -229,7 +218,7 @@ body {
   margin: unset;
   height: 36px;
   padding: unset;
-  height: 18rem;
+  height: 16.5rem;
   background-color: #292929;
 }
 #ice-container > .cup.search-fixed > .top::after {
@@ -253,9 +242,13 @@ body {
 #ice-container > .cup.search-fixed > .top .top-wrap a[class=logo] {
   display: none;
 }
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-logo {
+  float: unset;
+  position: absolute;
+  left: 0;
+}
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search {
   margin: auto;
-  width: 100%;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search {
   z-index: 200;
@@ -263,13 +256,12 @@ body {
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup {
   display: block !important;
-  left: -16rem !important;
+  left: calc((100vw - var(--cate-width) - 3.5rem - var(--login-width) - 35rem) / 2 * -1) !important;
   top: 70px !important;
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
-  transform: translateX(5px);
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search #J_Search > .search-suggest-popup .search-suggest-menu {
-  background-color: #292929;
+  background-color: #353535;
   border: unset;
   border-radius: unset;
 }
@@ -789,7 +781,7 @@ div[data-spm=seoinject] > .layer {
     height: 3.2rem;
     min-height: unset !important;
     background-color: #353535;
-    z-index: 1000;
+    z-index: 1001;
   }
   #ice-container .screen-outer div[data-name=service] .J_Service::before {
     display: none;
@@ -807,6 +799,14 @@ div[data-spm=seoinject] > .layer {
   #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--]::before {
     display: none;
   }
+  #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--]::after {
+    content: "";
+    display: block;
+    background: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01O2MJd41dMj9CaLAGP_!!3558723722-2-tblife2_ugc.png") no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+  }
   #ice-container .screen-outer div[data-name=service] .J_Service > div[class^=cate-title--] span[class^=cate-title-txt--] {
     flex: 1;
   }
@@ -818,6 +818,7 @@ div[data-spm=seoinject] > .layer {
   }
   #ice-container .screen-outer div[data-name=service] .J_Service > ul[class^=service-bd] {
     display: none;
+    height: calc(100vh - 36px);
   }
   #ice-container .screen-outer div[data-name=service] .J_Service > ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] {
     left: 15rem;
@@ -840,6 +841,9 @@ div[data-spm=seoinject] > .layer {
     border-radius: 50%;
     border: 2px solid #fff;
     box-sizing: border-box;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right::before {
+    display: none;
   }
   #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] {
     padding: unset;

@@ -101,7 +101,7 @@
       margin: unset;
       height: $topbar_height;
       padding: unset;
-      height: 18rem;
+      height: 16.5rem;
       background-color: $bg_color_2;
       // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
       &::after {
@@ -125,20 +125,23 @@
         a[class="logo"] {
           display: none;
         }
+        .tbh-logo {
+          float: unset;
+          position: absolute;
+          left: 0;
+        }
         .tbh-search {
           margin: auto;
-          width: 100%;
           #J_Search {
             z-index: 200;
             width: 35rem !important;
             & > .search-suggest-popup {
               display: block !important;
-              left: -16rem !important;
+              left: calc((($content_width - 35rem) / 2) * -1) !important;
               top: 70px !important;
               width: $content_width;
-              transform: translateX(5px);
               .search-suggest-menu {
-                background-color: $bg_color_2;
+                background-color: $bg_color_3;
                 border: unset;
                 border-radius: unset;
                 * {
