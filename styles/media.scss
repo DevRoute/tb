@@ -41,11 +41,12 @@
         &::after {
           content: "";
           display: block;
-          background: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01O2MJd41dMj9CaLAGP_!!3558723722-2-tblife2_ugc.png")
+          background: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01Wqh2b31dMj9Hx0nYt_!!3558723722-2-tblife2_ugc.png")
             no-repeat;
           background-size: 100% 100%;
           width: 30px;
           height: 30px;
+          filter: invert(50%);
         }
         span[class^="cate-title-txt--"] {
           flex: 1;
