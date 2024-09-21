@@ -145,12 +145,12 @@
               border: 2px solid var(--tbpc-primary-theme-color);
               border-radius: 12px;
               .btn-search {
-                top: 3px;
+                top: 2px;
+                height: 38px;
               }
             }
             .search-suggest-popup {
               position: unset;
-              // display: block !important;
               left: 0;
               top: 0;
               width: $content_width;
@@ -158,12 +158,10 @@
                 position: absolute;
                 display: block !important;
                 left: calc(($content_width - 35rem) / -2) !important;
-                // top: 70px !important;
                 width: $content_width;
                 background-color: $bg_color_3;
                 border: unset;
                 border-radius: unset;
-                // border-bottom: 1px solid $border_color;
                 .search-suggest-menu-header {
                   .search-suggest-menu-history-item {
                     background-color: $bg_color_2;
@@ -206,9 +204,12 @@
                 }
               }
             }
-            [data-sg-type="hotWord"] + div {
+            & > div[style*="block"] {
               height: 10.8rem;
-              display: block;
+              .search-suggest-menu {
+                height: 100%;
+                overflow: auto;
+              }
             }
           }
         }
