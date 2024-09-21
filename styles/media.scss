@@ -9,7 +9,7 @@
       top: calc($topbar_height + $tools_item_height);
       // 回到顶部元素
       .tb-toolkit-list .toolkit-item.toolkit-item-back {
-        bottom: $tools_item_height;
+        bottom: calc($tools_item_height + $topbar_height);
       }
     }
   }
@@ -22,9 +22,10 @@
       height: $tools_item_height;
       min-height: unset !important;
       background-color: $bg_color_3;
-      // border-radius: 50%;
-      transition: 0.7s all;
       z-index: 1000;
+      &::before {
+        display: none;
+      }
       & > div[class^="cate-title--"] {
         display: flex;
         flex-direction: column-reverse;
@@ -33,8 +34,15 @@
         cursor: pointer;
         width: $tools_width;
         padding: unset;
+        background-color: unset;
+        &::before {
+          display: none;
+        }
         span[class^="cate-title-txt--"] {
           flex: 1;
+          &::before {
+            display: none;
+          }
         }
         span[class^="cate-title-icon--"] {
           filter: invert(100%);
@@ -62,7 +70,7 @@
     .main .main-inner .col-right {
       right: 1.6rem;
       top: unset;
-      bottom: $tools_width;
+      bottom: $tools_width * 2;
       width: $tools_width;
       height: $tools_width;
       overflow: hidden;

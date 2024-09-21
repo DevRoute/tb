@@ -39,7 +39,7 @@ html:root {
   --cate-width: #{$cate_width};
   --login-width: #{$login_width};
   // 淘宝自身的css变量
-  --tbpc-primary-theme-color: #4a8dd6 !important;
+  --tbpc-primary-theme-color: #3b74b8 !important;
 }
 body {
   background-color: $bg_color_3 !important;
@@ -58,3 +58,8 @@ $content_width: calc(100vw - var(--cate-width) - $tools_width - var(--login-widt
 @import "./styles/seoinject.scss";
 @import "./styles/footer.scss";
 @import "./styles/media.scss";
+
+// 插件 -> 更新按钮样式
+button[data-spm-anchor-id] {
+  bottom: 50px !important;
+}
