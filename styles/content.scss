@@ -99,9 +99,10 @@
     margin-top: $tab_title_height;
     & > .top {
       margin: unset;
-      height: $topbar_height;
+      // height: $topbar_height;
       padding: unset;
-      height: 16.7rem;
+      min-height: 5.6rem;
+      height: auto;
       background-color: $bg_color_2;
       // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
       &::after {
@@ -120,6 +121,7 @@
         padding-top: 15px;
         display: flex;
         justify-content: center;
+        height: auto;
         // .tbh-logo,
         .tbh-logo-right,
         a[class="logo"] {
@@ -135,12 +137,29 @@
           #J_Search {
             z-index: 200;
             width: 35rem !important;
+            height: auto;
+            background-color: $bg_color_2;
+            border: unset;
+            form[name="search"] {
+              background-color: #fff;
+              border: 2px solid var(--tbpc-primary-theme-color);
+              border-radius: 12px;
+              .btn-search {
+                top: 3px;
+              }
+            }
             & > .search-suggest-popup {
+              position: unset;
               display: block !important;
-              left: calc(($content_width - 35rem) / -2) !important;
-              top: 70px !important;
+              left: 0;
+              top: 0;
               width: $content_width;
               .search-suggest-menu {
+                position: absolute;
+                display: block !important;
+                left: calc(($content_width - 35rem) / -2) !important;
+                // top: 70px !important;
+                width: $content_width;
                 background-color: $bg_color_3;
                 border: unset;
                 border-radius: unset;
@@ -174,6 +193,9 @@
                   }
                 }
               }
+            }
+            [data-sg-type="hotWord"] + div {
+              height: 10.8rem;
             }
           }
         }
