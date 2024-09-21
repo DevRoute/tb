@@ -69,7 +69,8 @@
     }
   }
 }
-.site-nav.site-nav-status-login {
+.site-nav.site-nav-status-login,
+.site-nav.site-nav-status-logout {
   &::after {
     content: '淘宝网首页.md -- 欢迎来到淘宝网之VScode版';
     color: get_font_color(30%);
