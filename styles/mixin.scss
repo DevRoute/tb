@@ -152,3 +152,14 @@ $file_icon_arror: $file_icon_md_url, $file_icon_exe_url, $file_icon_js_url,
     content: "." + $extension;
   }
 }
+// 渐变背景
+@mixin gradient-bg($left, $top, $width) {
+  content: "";
+  display: block;
+  position: fixed;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: 5.7rem;
+  background: linear-gradient(to top, $bg_color_3, #19324b);
+}

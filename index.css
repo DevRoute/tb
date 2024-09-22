@@ -212,23 +212,14 @@ body {
   background-color: #353535;
 }
 #ice-container::before {
-  content: "淘宝网首页.md";
-  display: flex;
-  align-items: center;
-  width: 100px;
-  height: 2.5rem;
-  padding-left: 30px;
+  content: "";
+  display: block;
   position: fixed;
-  top: 36px;
   left: calc(3.5rem + var(--cate-width));
-  color: #fff;
-  font-style: italic;
-  z-index: 999;
-  background-color: #1e1e1e;
-  background-image: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01Fn6k111dMj9LMorPh_!!3558723722-2-tblife2_ugc.png");
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
+  top: calc(2.5rem + 36px);
+  width: calc(100vw - 3.5rem - var(--cate-width));
+  height: 5.7rem;
+  background: linear-gradient(to top, #353535, #19324b);
 }
 #ice-container::after {
   content: "";
@@ -257,7 +248,6 @@ body {
   padding: unset;
   min-height: 5.6rem;
   height: auto;
-  background-color: #292929;
 }
 #ice-container > .cup.search-fixed > .top::after {
   content: "";
@@ -271,7 +261,6 @@ body {
 }
 #ice-container > .cup.search-fixed > .top .top-wrap {
   width: inherit;
-  background-color: #292929;
   padding-top: 15px;
   display: flex;
   justify-content: center;
@@ -290,21 +279,78 @@ body {
   z-index: 200;
   width: 35rem !important;
   height: auto;
-  background-color: #292929;
+  background-color: transparent;
   border: unset;
   left: calc((100vw - var(--cate-width) - 3.5rem - var(--login-width) - 35rem) / 2) !important;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search div[data-sg-type=tab] {
+  border-radius: 8px 0 0 8px;
   left: 2px;
+  background-color: transparent;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search div[data-sg-type=tab] ul.search-suggest-tabs {
+  background-color: transparent;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search div[data-sg-type=tab] ul.search-suggest-tabs li {
+  color: black;
+  background-color: #fff;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search div[data-sg-type=tab] ul.search-suggest-tabs li:first-child {
+  color: #b3b3b3;
+  background-color: rgba(53, 53, 53, 0.7);
+  margin-bottom: 1px;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search div[data-sg-type=tab] ul.search-suggest-tabs li:first-child [fill] {
+  fill: #fff;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] {
-  background-color: #fff;
-  border: 2px solid var(--tbpc-primary-theme-color);
+  border: 2px solid rgba(204, 204, 204, 0.7);
   border-radius: 12px;
 }
-#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] .btn-search {
-  top: 2px;
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] div[data-sg-type=placeholder] {
+  transform: translateX(5px);
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] .search-suggest-combobox input {
+  background-color: transparent;
+  color: #fff;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] .search-button .btn-search {
+  top: 1.5px;
   height: 38px;
+  opacity: 0;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search form[name=search] .search-button::after {
+  content: "";
+  position: absolute;
+  top: 1.5px;
+  right: 2px;
+  width: 38px;
+  height: 38px;
+  transform: scale(0.7);
+  background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN010I8Znf1dMj9Ix3jcH_!!3558723722-2-tblife2_ugc.png");
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search .image-search-wrapper {
+  display: none;
+  right: 50px;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search .image-search-wrapper .image-search-icon {
+  position: relative;
+}
+#ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search .image-search-wrapper .image-search-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  filter: invert(100%);
+  pointer-events: none;
+  z-index: -1;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search .search-suggest-popup {
   position: relative;
@@ -336,6 +382,7 @@ body {
   content: "最近打开";
   display: inline-block;
   color: #5792e3;
+  font-size: 14px;
 }
 #ice-container > .cup.search-fixed > .top .top-wrap .tbh-search .search-wrap #J_Search .search-suggest-popup .search-suggest-menu .search-suggest-menu-header .search-suggest-menu-history .search-suggest-menu-history-header .search-suggest-menu-history-title {
   display: none;
@@ -749,6 +796,8 @@ body {
   width: calc(100% - 2rem);
   word-wrap: break-word;
   white-space: pre-wrap;
+  display: flex;
+  align-items: center;
 }
 #ice-container > .screen-outer div[data-name=service] .J_Service ul[class^=service-bd] li.J_Cat > div[class^=sec-cate--] > div[class^=sec-cate-container--] > div[class^=sec-cate-container-scroll--] > div[class^=cate-links-container] div[class^=sec-cate-content] a:nth-child(4n)::before {
   background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01iFdw3i1dMj9N951el_!!3558723722-2-tblife2_ugc.png");
@@ -800,7 +849,6 @@ body {
   z-index: 220;
   margin-right: unset;
   height: calc(100vh - 36px);
-  background-color: #292929;
   overflow: auto;
   border-left: 1px solid #353535;
 }
@@ -823,7 +871,7 @@ body {
 #ice-container > .screen-outer .main .main-inner .col-right .tbh-user {
   margin: 5px;
   border-radius: unset;
-  background-color: #292929;
+  background-color: transparent;
   background-image: unset !important;
 }
 #ice-container > .screen-outer .main .main-inner .col-right .tbh-user a.mytao-collectitem {
@@ -846,10 +894,30 @@ body {
   margin: unset;
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   overflow: hidden;
+  background-color: transparent;
+}
+#ice-container > .layer::before {
+  content: "淘宝网首页.md";
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 2.5rem;
+  padding-left: 30px;
+  position: fixed;
+  top: 36px;
+  left: calc(3.5rem + var(--cate-width));
+  color: #fff;
+  font-style: italic;
+  z-index: 999;
+  background-color: #1e1e1e;
+  background-image: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01Fn6k111dMj9LMorPh_!!3558723722-2-tblife2_ugc.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
 }
 #ice-container > .layer .layer-inner {
   width: inherit;
-  background-color: #1e1e1e;
+  background-color: transparent;
 }
 #ice-container > .layer .layer-inner .tb-picks-container {
   width: inherit;
@@ -859,7 +927,8 @@ body {
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   padding: unset;
   height: 2.5rem;
-  background-color: #292929;
+  border-bottom: 1px solid #292929;
+  background-color: transparent;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .smallTabListWrapper .smallTabListInnerWrapper {
   width: inherit;
@@ -905,6 +974,8 @@ body {
   aspect-ratio: 1/1.47;
   background-color: #1e1e1e;
   border-radius: 20px;
+  border: 1px solid #626262;
+  padding: 3px;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item:hover {
   background-color: #353535;
@@ -1045,6 +1116,7 @@ div[data-spm=seoinject] > .layer {
     border: 2px solid #fff;
     box-sizing: border-box;
     z-index: 1001;
+    background-color: #292929;
   }
   #ice-container .screen-outer .main .main-inner .col-right::before {
     display: none;

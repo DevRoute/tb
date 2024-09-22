@@ -101,6 +101,7 @@
       border: 2px solid $border_color;
       box-sizing: border-box;
       z-index: 1001;
+      background-color: $bg_color_2;
       &::before {
         display: none;
       }
