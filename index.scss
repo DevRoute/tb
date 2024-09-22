@@ -34,7 +34,9 @@ $tab_title_height: 2.5rem;
 $bg_color_1: get_bg_color();
 $bg_color_2: get_bg_color(5%);
 $bg_color_3: get_bg_color(10%);
-
+// 颜色
+$blue_bg_color: #163047;
+$blue_font_color: #5792e3;
 html:root {
   --cate-width: #{$cate_width};
   --login-width: #{$login_width};
@@ -49,9 +51,8 @@ body {
 // 计算内容的宽度
 $content_width: calc(100vw - var(--cate-width) - $tools_width - var(--login-width));
 
+@import "./styles/mixin.scss";
 @import "./styles/scrollbar.scss";
-@import "./styles/search.scss";
-@import "./styles/logo.scss";
 @import "./styles/topbar.scss";
 @import "./styles/tools.scss";
 @import "./styles/content.scss";

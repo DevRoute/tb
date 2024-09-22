@@ -1,0 +1,154 @@
+// logo样式
+@mixin logo_style {
+  content: "";
+  display: block;
+  background-image: url("https://img.alicdn.com/imgextra/i1/O1CN011YZ3P01zMCE6HGyhk_!!6000000006699-2-tps-480-144.png");
+  background-size: 100% 100%;
+  height: $topbar_height;
+  aspect-ratio: 10 / 3;
+  position: absolute;
+  top: 2px;
+  left: -1rem;
+}
+// 输入搜索框
+@mixin input_search_style {
+  margin: 0;
+  position: fixed;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  // 搜索栏的高度
+  $input_search_height: $topbar_height - 6px;
+  .search-wrap {
+    & > .search-bd {
+      width: 750px !important;
+      height: $input_search_height;
+      // 开头搜索下拉框
+      div[data-sg-type="tab"] {
+        margin-top: unset;
+        height: 25px;
+        .search-suggest-tabs-tab {
+          height: $input_search_height;
+          line-height: $input_search_height;
+          .search-tab-icon {
+            top: 10px;
+          }
+        }
+      }
+      form[name="search"] {
+        // 搜索提示
+        div[data-sg-type="placeholder"] {
+          top: -5px;
+        }
+        // 搜索框
+        .search-suggest-combobox {
+          height: $input_search_height - 5px;
+          input {
+            height: $input_search_height - 5px;
+          }
+        }
+        // 搜索按钮
+        .search-button > .btn-search {
+          top: 0;
+          right: 0;
+          height: $input_search_height - 2px;
+        }
+      }
+      // 分割线
+      .search-suggest-split {
+        top: 8px;
+      }
+      // 相机
+      .image-search-wrapper {
+        top: 0px;
+      }
+      // 优惠词条
+      div[data-sg-type="hotWord"] {
+        display: none;
+      }
+    }
+  }
+}
+// 文件夹图标样式
+@mixin folder_icon_style {
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01yD9lFf1dMj9JREvXX_!!3558723722-2-tblife2_ugc.png")
+      no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.2rem;
+  }
+  // 展开图标
+  &:hover {
+    &::before {
+      background: url("https://img.alicdn.com/imgextra/i4/3558723722/O1CN01NwsqP11dMj9JRlgoV_!!3558723722-2-tblife2_ugc.png")
+        no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+// 展开箭头样式
+@mixin arrow_style {
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid $font_color;
+    margin-left: 0.2rem;
+    margin-right: 5px;
+    transform: scale(1.5);
+  }
+}
+// 收起箭头样式
+@mixin arrow_up_style {
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $font_color;
+    margin-left: 0.2rem;
+    margin-right: 5px;
+  }
+}
+// 文件图标
+$file_icon_md_url: "https://img.alicdn.com/imgextra/i2/3558723722/O1CN01Fn6k111dMj9LMorPh_!!3558723722-2-tblife2_ugc.png";
+$file_icon_exe_url: "https://img.alicdn.com/imgextra/i2/3558723722/O1CN01UiqglL1dMj9MN9BEG_!!3558723722-2-tblife2_ugc.png";
+$file_icon_js_url: "https://img.alicdn.com/imgextra/i2/3558723722/O1CN01zI0MIx1dMj9Ld4TBK_!!3558723722-2-tblife2_ugc.png";
+$file_icon_html_url: "https://img.alicdn.com/imgextra/i1/3558723722/O1CN01iFdw3i1dMj9N951el_!!3558723722-2-tblife2_ugc.png";
+$file_icon_arror: $file_icon_md_url, $file_icon_exe_url, $file_icon_js_url,
+  $file_icon_html_url;
+// 文件图标基础样式
+%file-base-icon {
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 3px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &::after {
+    display: inline;
+  }
+}
+
+// 文件图标mixin，接受URL和扩展名作为参数
+@mixin file-icon($icon-url, $extension) {
+  @extend %file-base-icon;
+  &::before {
+    background-image: url($icon-url);
+  }
+  &::after {
+    content: "." + $extension;
+  }
+}
