@@ -31,8 +31,9 @@
     z-index: 200;
   }
   & > .J_Module {
-    max-height: 60px;
-    overflow: hidden;
+    // max-height: 60px;
+    // overflow: hidden;
+    display: none;
   }
   // 默认搜索
   & > .cup.search-fixed {
@@ -115,7 +116,7 @@
                     height: 38px;
                     opacity: 0;
                   }
-                  &::after {  
+                  &::after {
                     content: "";
                     position: absolute;
                     top: 1.5px;
@@ -123,7 +124,7 @@
                     width: 38px;
                     height: 38px;
                     transform: scale(0.7);
-                    background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN010I8Znf1dMj9Ix3jcH_!!3558723722-2-tblife2_ugc.png");  
+                    background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN010I8Znf1dMj9Ix3jcH_!!3558723722-2-tblife2_ugc.png");
                     background-size: cover;
                     pointer-events: none;
                     z-index: -1;
@@ -136,16 +137,16 @@
                 right: 50px;
                 .image-search-icon {
                   position: relative;
-                  &::after {  
+                  &::after {
                     content: "";
                     position: absolute;
                     top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background-image: inherit;  
-                    background-size: cover;  
-                    filter: invert(100%);  
+                    background-image: inherit;
+                    background-size: cover;
+                    filter: invert(100%);
                     pointer-events: none;
                     z-index: -1;
                   }
