@@ -237,6 +237,10 @@ body {
   width: 100vw;
   z-index: 200;
 }
+#ice-container > .J_Module {
+  max-height: 60px;
+  overflow: hidden;
+}
 #ice-container > .cup.search-fixed {
   margin: unset;
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
