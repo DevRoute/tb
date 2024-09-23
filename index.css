@@ -1146,6 +1146,10 @@ div[data-spm=seoinject] > .layer {
     height: inherit;
     cursor: pointer;
   }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper .J_UserMemberHome .J_UserMemberAvatar {
+    width: inherit;
+    height: inherit;
+  }
   #ice-container .screen-outer .main .main-inner .col-right:hover {
     border-radius: unset;
     overflow: unset;
