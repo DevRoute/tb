@@ -238,8 +238,7 @@ body {
   z-index: 200;
 }
 #ice-container > .J_Module {
-  max-height: 60px;
-  overflow: hidden;
+  display: none;
 }
 #ice-container > .cup.search-fixed {
   margin: unset;
@@ -1146,6 +1145,10 @@ div[data-spm=seoinject] > .layer {
     width: inherit;
     height: inherit;
     cursor: pointer;
+  }
+  #ice-container .screen-outer .main .main-inner .col-right > div[data-spm=user] .user .J_UserMemberWrap .avatar-wrapper .J_UserMemberHome .J_UserMemberAvatar {
+    width: inherit;
+    height: inherit;
   }
   #ice-container .screen-outer .main .main-inner .col-right:hover {
     border-radius: unset;
