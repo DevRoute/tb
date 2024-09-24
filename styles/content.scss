@@ -41,7 +41,7 @@
     margin: unset;
     width: $content_width;
     border-radius: unset;
-    margin-top: $tab_title_height * 3;
+    margin-top: calc($tab_title_height + 55px);
     & > .top {
       margin: unset;
       padding: unset;
@@ -91,6 +91,7 @@
                 background-color: transparent;
                 ul.search-suggest-tabs {
                   background-color: transparent;
+                  border-radius: 8px 0 0 8px;
                   li {
                     color: black;
                     background-color: #fff;
@@ -472,6 +473,7 @@
       background-color: transparent;
       .tb-picks-container {
         width: inherit;
+        margin-top: 10px;
         // 商品标题
         .smallTabListWrapper {
           z-index: 210;
