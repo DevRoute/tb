@@ -661,7 +661,7 @@
             background-color: $bg_color_1;
             border-radius: 15px;
             border: 1px solid get_bg_color(30%);
-            // padding: 3px;
+            margin: unset;
             &:hover {
               background-color: $bg_color_3;
               transform: translateY(-15px);

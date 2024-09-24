@@ -992,6 +992,7 @@ body {
   background-color: #1e1e1e;
   border-radius: 15px;
   border: 1px solid #626262;
+  margin: unset;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item:hover {
   background-color: #353535;
