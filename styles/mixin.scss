@@ -182,13 +182,13 @@
       // 开头搜索下拉框
       div[data-sg-type="tab"] {
         margin-top: unset;
-        height: 25px;
+        height: $input_search_height - 2px;
         border-radius: 8px 0 0 8px;
         left: 2px;
         background-color: transparent;
-        
         ul.search-suggest-tabs {
           background-color: transparent;
+          border-radius: 8px 0 0 8px;
           li {
             color: black;
             background-color: #fff;
@@ -199,7 +199,7 @@
                 fill: $font_color;
               }
               color: get_font_color(30%);
-              background-color: rgba($color: $bg_color_3, $alpha: 0.7);
+              background-color: rgba($color: $bg_color_1, $alpha: 0.7);
               margin-bottom: 1px;
             }
             .search-tab-icon {
