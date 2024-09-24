@@ -7,7 +7,7 @@
   background-color: $bg_color_3;
   border-bottom: unset;
   .site-nav-bd {
-    background-color: var(--tbpc-primary-theme-color);;
+    background-color: var(--tbpc-primary-theme-color);
     display: flex;
     justify-content: space-between;
     margin: unset;
@@ -63,8 +63,15 @@
       }
     }
     .site-nav-menu-hd {
-      a {
+      a,
+      .site-nav-theme {
         color: $font_color !important;
+      }
+    }
+    .site-nav-menu-bd {
+      .theme-title,
+      .text {
+        color: $font_color;
       }
     }
   }
@@ -72,7 +79,7 @@
 .site-nav.site-nav-status-login,
 .site-nav.site-nav-status-logout {
   &::after {
-    content: '淘宝网首页.md -- 欢迎来到淘宝网之VScode版';
+    content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
     color: get_font_color(30%);
   }
   &::before {
