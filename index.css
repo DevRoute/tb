@@ -119,8 +119,13 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-menu-hd a {
   float: unset;
 }
-#J_SiteNav .site-nav-bd .site-nav-menu-hd a {
+#J_SiteNav .site-nav-bd .site-nav-menu-hd a,
+#J_SiteNav .site-nav-bd .site-nav-menu-hd .site-nav-theme {
   color: #fff !important;
+}
+#J_SiteNav .site-nav-bd .site-nav-menu-bd .theme-title,
+#J_SiteNav .site-nav-bd .site-nav-menu-bd .text {
+  color: #fff;
 }
 
 .site-nav.site-nav-status-login::after,
@@ -516,8 +521,11 @@ body {
   height: 100%;
   overflow: auto;
 }
+#ice-container > .search-fixed.search-decorations {
+  background-color: transparent;
+}
 #ice-container > .search-fixed.search-decorations > .top {
-  background-color: #353535;
+  background-color: transparent;
 }
 #ice-container > .search-fixed.search-decorations > .top .top-wrap {
   padding-top: 15px;

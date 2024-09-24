@@ -305,8 +305,9 @@
   }
   // 开始时搜索栏
   & > .search-fixed.search-decorations {
+    background-color: transparent;
     & > .top {
-      background-color: $bg_color_3;
+      background-color: transparent;
       .top-wrap {
         padding-top: 15px;
       }
