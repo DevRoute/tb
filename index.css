@@ -182,6 +182,7 @@ body {
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top {
   width: 24px;
   height: 22px;
+  position: relative;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top img {
   display: none;
@@ -193,6 +194,12 @@ body {
   background-size: 100% 100%;
   height: 100%;
   filter: invert(70%);
+}
+#J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top .im-num {
+  position: absolute;
+  top: -16px;
+  left: 9px;
+  padding: 0 4px;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-bottom {
   color: #b3b3b3;
@@ -978,15 +985,13 @@ body {
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item {
   float: unset;
   flex: 1;
-  margin: auto;
   min-width: 200px;
   max-width: 240px;
   height: unset;
   aspect-ratio: 1/1.47;
   background-color: #1e1e1e;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid #626262;
-  padding: 3px;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item:hover {
   background-color: #353535;
@@ -996,6 +1001,7 @@ body {
   width: inherit;
   height: unset;
   aspect-ratio: 1/1;
+  border-radius: 15px 15px 0 0;
 }
 #ice-container > .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tb-pick-content-item a .info-wrapper .info-wrapper-title-text {
   color: #fff;

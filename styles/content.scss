@@ -654,15 +654,14 @@
           .tb-pick-content-item {
             float: unset;
             flex: 1;
-            margin: auto;
             min-width: 200px;
             max-width: 240px;
             height: unset;
             aspect-ratio: 1 / 1.47;
             background-color: $bg_color_1;
-            border-radius: 20px;
+            border-radius: 15px;
             border: 1px solid get_bg_color(30%);
-            padding: 3px;
+            // padding: 3px;
             &:hover {
               background-color: $bg_color_3;
               transform: translateY(-15px);
@@ -672,6 +671,7 @@
                 width: inherit;
                 height: unset;
                 aspect-ratio: 1 / 1;
+                border-radius: 15px 15px 0 0;
               }
               .info-wrapper {
                 .info-wrapper-title-text {
