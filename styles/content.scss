@@ -41,7 +41,7 @@
     margin: unset;
     width: $content_width;
     border-radius: unset;
-    margin-top: $tab_title_height;
+    margin-top: $tab_title_height * 3;
     & > .top {
       margin: unset;
       padding: unset;

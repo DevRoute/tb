@@ -251,7 +251,7 @@ body {
   margin: unset;
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width));
   border-radius: unset;
-  margin-top: 2.5rem;
+  margin-top: 7.5rem;
 }
 #ice-container > .cup.search-fixed > .top {
   margin: unset;
