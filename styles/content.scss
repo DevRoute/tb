@@ -2,16 +2,19 @@
 #ice-container {
   position: relative;
   left: calc($tools_width + var(--cate-width));
-  background-color: $bg_color_3;
+  background-color: $bg_color_1;
   // 渐变背景
   &::before {
-    @include gradient-bg(
-      calc($tools_width + var(--cate-width)),
-      calc($tab_title_height + $topbar_height),
-      calc(100vw - $tools_width - var(--cate-width))
-    );
+    content: "";
+    display: block;
+    position: fixed;
+    left: calc($tools_width + var(--cate-width));
+    top: calc($tab_title_height + $topbar_height);
+    width: calc(100vw - $tools_width - var(--cate-width));
+    // height: calc(100vh - $tab_title_height - $topbar_height);
+    height: 5.7rem;
+    background: linear-gradient(to bottom, #19324b 10%, $bg_color_1 90%);
   }
-  // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
   &::after {
     content: "";
     display: block;
@@ -31,8 +34,6 @@
     z-index: 200;
   }
   & > .J_Module {
-    // max-height: 60px;
-    // overflow: hidden;
     display: none;
   }
   // 默认搜索
@@ -63,7 +64,6 @@
         display: flex;
         justify-content: center;
         height: auto;
-        // .tbh-logo,
         .tbh-logo-right,
         a[class="logo"],
         .tbh-logo {

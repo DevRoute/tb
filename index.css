@@ -23,13 +23,11 @@ body {
   display: inline;
 }
 
-/* 针对整个滚动条的样式 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
   background-color: #8f8f8f;
   border-radius: 10px;
@@ -37,22 +35,19 @@ body {
   background-clip: content-box;
 }
 
-/* 滚动条轨道 */
 ::-webkit-scrollbar-track {
   background-color: #353535;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-button {
-  display: none; /* 通常不显示按钮 */
+  display: none;
 }
 
-/* 滚动条两端（或上下）的指示器 */
 ::-webkit-scrollbar-corner {
   background: #d2d2d2;
 }
 
-/* 当鼠标悬停在滑块上时改变滑块样式 */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #bcbcbc;
 }
@@ -198,7 +193,7 @@ body {
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-top .im-num {
   position: absolute;
   top: -16px;
-  left: 9px;
+  left: 10px;
   padding: 0 4px;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .im-entry .im-bottom {
@@ -221,7 +216,7 @@ body {
 #ice-container {
   position: relative;
   left: calc(3.5rem + var(--cate-width));
-  background-color: #353535;
+  background-color: #1e1e1e;
 }
 #ice-container::before {
   content: "";
@@ -231,7 +226,7 @@ body {
   top: calc(2.5rem + 36px);
   width: calc(100vw - 3.5rem - var(--cate-width));
   height: 5.7rem;
-  background: linear-gradient(to top, #353535, #19324b);
+  background: linear-gradient(to bottom, #19324b 10%, #1e1e1e 90%);
 }
 #ice-container::after {
   content: "";
