@@ -10,6 +10,154 @@
   top: 2px;
   left: -1rem;
 }
+// 搜索记录
+@mixin search_history_style {
+  .search-suggest-popup {
+    position: relative;
+    left: calc(($content_width - 35rem - 2rem) / -2) !important;
+    top: 2px !important;
+    width: calc($content_width - 2rem) !important;
+    transform: unset;
+    .search-suggest-menu {
+      position: absolute;
+      display: block !important;
+      left: 0;
+      width: calc($content_width - 2rem);
+      background-color: get_bg_color(3%);
+      border: unset;
+      border-radius: unset;
+      padding: unset;
+      .search-suggest-menu-header {
+        .search-suggest-menu-history {
+          margin: unset;
+          padding: unset;
+          .search-suggest-menu-history-header {
+            background-color: $blue_bg_color;
+            padding: 8px 12px;
+            margin: unset;
+            &::before {
+              content: "最近打开";
+              display: inline-block;
+              color: $blue_font_color;
+              font-size: 14px;
+            }
+            .search-suggest-menu-history-title {
+              display: none;
+            }
+            .search-suggest-menu-history-clean-icon {
+              fill: $font_color;
+            }
+          }
+          .search-suggest-menu-history-content-wrapper {
+            .search-suggest-menu-history-list-wrapper {
+              height: unset;
+              width: 100%;
+              .search-suggest-menu-history-item {
+                background-color: $bg_color_2;
+                margin: unset;
+                border: unset;
+                border-radius: unset;
+                padding: unset;
+                width: 50%;
+                padding: 8px 12px;
+                background-color: transparent;
+                &:hover {
+                  background-color: $bg_color_3;
+                }
+                .title {
+                  display: flex;
+                  align-items: center;
+                }
+                &:nth-child(4n) .title {
+                  @include file-icon($file_icon_html_url, "html");
+                }
+                &:nth-child(4n + 1) .title {
+                  @include file-icon($file_icon_md_url, "md");
+                }
+                &:nth-child(4n + 2) .title {
+                  @include file-icon($file_icon_exe_url, "exe");
+                }
+                &:nth-child(4n + 3) .title {
+                  @include file-icon($file_icon_js_url, "js");
+                }
+              }
+            }
+          }
+        }
+      }
+      * {
+        color: $font_color;
+      }
+      .search-suggest-menu-content {
+        .titleWrapper {
+          background-color: $blue_bg_color;
+          margin: unset;
+          padding: 8px 13px;
+          .title {
+            color: $blue_font_color;
+          }
+        }
+      }
+
+      .search-suggest-menu-item {
+        &:hover {
+          background-color: $bg_color_3;
+        }
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          margin-right: 5px;
+        }
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        .item-wrapper {
+          height: 32px;
+          line-height: unset;
+          .item-text {
+            float: unset;
+          }
+        }
+        .text,
+        .item-wrapper {
+          &::after {
+            display: inline-block;
+          }
+        }
+        $extensions: ".md", ".exe", ".js", ".html";
+        @each $ext in $extensions {
+          $index: index($extensions, $ext);
+          $url: nth($file_icon_arror, $index);
+          &:nth-child(4n + #{$index - 1}) {
+            &::before {
+              background-image: url($url);
+            }
+            .text::after,
+            .item-wrapper::after {
+              content: $ext;
+            }
+          }
+        }
+      }
+    }
+  }
+  & > div[style*="block"] {
+    height: 100%;
+    min-height: 12.8rem;
+    &:hover {
+      display: block !important;
+    }
+    .search-suggest-menu {
+      height: 100%;
+      overflow: auto;
+    }
+  }
+}
 // 输入搜索框
 @mixin input_search_style {
   margin: 0;
@@ -18,40 +166,71 @@
   left: 50%;
   transform: translateX(-50%);
   // 搜索栏的高度
-  $input_search_height: $topbar_height - 6px;
+  $input_search_height: $topbar_height - 4px;
   .search-wrap {
+    .search-suggest-menu-visiable {
+      form[name="search"] {
+        border: 1px solid $blue_border_color !important;
+      }
+    }
     & > .search-bd {
-      width: 750px !important;
+      width: 35rem !important;
       height: $input_search_height;
+      background-color: transparent;
+      border: unset;
+      z-index: 1002;
       // 开头搜索下拉框
       div[data-sg-type="tab"] {
         margin-top: unset;
         height: 25px;
-        .search-suggest-tabs-tab {
-          height: $input_search_height;
-          line-height: $input_search_height;
-          .search-tab-icon {
-            top: 10px;
+        border-radius: 8px 0 0 8px;
+        left: 2px;
+        background-color: transparent;
+        
+        ul.search-suggest-tabs {
+          background-color: transparent;
+          li {
+            color: black;
+            background-color: #fff;
+            height: $input_search_height;
+            line-height: $input_search_height;
+            &:first-child {
+              [fill] {
+                fill: $font_color;
+              }
+              color: get_font_color(30%);
+              background-color: rgba($color: $bg_color_3, $alpha: 0.7);
+              margin-bottom: 1px;
+            }
+            .search-tab-icon {
+              top: 10px;
+            }
           }
         }
       }
       form[name="search"] {
+        border: 1px solid rgba($color: #ccc, $alpha: 0.7);
+        border-radius: 12px;
         // 搜索提示
         div[data-sg-type="placeholder"] {
-          top: -5px;
+          top: -3px;
+          transform: translateX(5px);
         }
         // 搜索框
         .search-suggest-combobox {
           height: $input_search_height - 5px;
           input {
             height: $input_search_height - 5px;
+            background-color: transparent;
+            color: $font_color;
           }
         }
         // 搜索按钮
         .search-button > .btn-search {
           top: 0;
           right: 0;
-          height: $input_search_height - 2px;
+          height: $input_search_height ;
+          border-radius: 0 12px 12px 0;
         }
       }
       // 分割线
@@ -61,11 +240,13 @@
       // 相机
       .image-search-wrapper {
         top: 0px;
+        filter: invert(100%);
       }
       // 优惠词条
       div[data-sg-type="hotWord"] {
         display: none;
       }
+      @include search_history_style;
     }
   }
 }
