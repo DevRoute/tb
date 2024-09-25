@@ -94,7 +94,12 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-bd-l li .site-nav-menu-bd-panel a:hover,
 #J_SiteNav .site-nav-bd .site-nav-bd-r li .site-nav-menu-bd-panel .site-nav-region-item:hover,
 #J_SiteNav .site-nav-bd .site-nav-bd-r li .site-nav-menu-bd-panel a:hover {
-  background: #292929;
+  background: #e9e9e9;
+  color: #1a1a1a;
+}
+#J_SiteNav .site-nav-bd .site-nav-bd-l .site-nav-icon,
+#J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-icon {
+  color: #e6e6e6;
 }
 #J_SiteNav .site-nav-bd .site-nav-bd-l .site-nav-user-info * {
   color: #fff;
@@ -1232,11 +1237,11 @@ div[data-spm=seoinject] > .layer {
   width: calc(100vw - var(--cate-width) - 3.5rem - var(--login-width)) !important;
 }
 #J_SiteFooter .tb-footer {
-  width: inherit;
   background-color: #1e1e1e;
 }
 #J_SiteFooter .tb-footer .tb-footer-inner {
   width: inherit;
+  overflow: hidden;
 }
 #J_SiteFooter .tb-footer .tb-footer-inner div[class^=tb-footer] span {
   color: #fff;

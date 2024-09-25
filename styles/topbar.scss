@@ -35,9 +35,13 @@
           transform: translateY(calc(5px - 100% - $topbar_height));
           .site-nav-region-item:hover,
           a:hover {
-            background: $bg_color_2;
+            background: get_bg_color(90%);
+            color: get_font_color(90%);
           }
         }
+      }
+      .site-nav-icon {
+        color: get_font_color(10%);
       }
     }
     .site-nav-bd-l {
