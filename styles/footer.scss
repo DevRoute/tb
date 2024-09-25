@@ -4,10 +4,10 @@
   left: calc($tools_width + var(--cate-width));
   width: $content_width !important;
   .tb-footer {
-    width: inherit;
     background-color: $bg_color_1;
     .tb-footer-inner {
       width: inherit;
+      overflow: hidden;
       div[class^="tb-footer"] {
         span {
           color: $font_color;
