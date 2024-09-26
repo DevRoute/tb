@@ -109,6 +109,7 @@
               form[name="search"] {
                 border: 1px solid rgba($color: #ccc, $alpha: 0.7);
                 border-radius: 12px;
+                height: 2.5rem;
                 div[data-sg-type="placeholder"] {
                   transform: translateX(5px);
                 }
@@ -118,29 +119,15 @@
                 }
                 .search-button {
                   .btn-search {
-                    top: 1.5px;
-                    height: 38px;
-                    opacity: 0;
-                  }
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    top: 1.5px;
-                    right: 2px;
-                    width: 38px;
-                    height: 38px;
-                    transform: scale(0.7);
-                    background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN010I8Znf1dMj9Ix3jcH_!!3558723722-2-tblife2_ugc.png");
-                    background-size: cover;
-                    pointer-events: none;
-                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    height: 2.5rem;
+                    border-radius: 0 12px 12px 0;
                   }
                 }
               }
               // 相机
               .image-search-wrapper {
-                display: none;
-                right: 50px;
                 .image-search-icon {
                   position: relative;
                   &::after {
