@@ -3,9 +3,10 @@ div[data-spm="seoinject"] {
   position: relative;
   left: calc($tools_width + var(--cate-width));
   width: $content_width !important;
-  & > .layer {
-    width: inherit;
-    background-color: $bg_color_1;
-    color: $font_color;
-  }
+  margin: unset;
+  padding: unset !important;
+  max-width: unset;
+  min-width: unset;
+  background-color: $bg_color_1 !important;
+  color: $font_color;
 }

@@ -1,7 +1,7 @@
 // 初始化时分类的宽度
-$cate_width: 15rem;
+$cate_width: 16rem;
 // 初始化时登录模块宽度
-$login_width: 16rem;
+$login_width: 17.2rem;
 // 顶部导航栏高度
 $topbar_height: 36px;
 // 主题基本颜色
@@ -44,7 +44,7 @@ html:root {
   --tbpc-primary-theme-color: #3b74b8 !important;
 }
 body {
-  background-color: $bg_color_3 !important;
+  background-color: $bg_color_1 !important;
   position: relative;
 }
 

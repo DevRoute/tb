@@ -13,7 +13,7 @@
       }
     }
   }
-  #ice-container .screen-outer div[data-name="service"] {
+  #ice-container .tbpc-layout .screen-outer div[data-name="service"] {
     .J_Service {
       position: fixed;
       top: $topbar_height;
@@ -89,8 +89,8 @@
   }
 
   // 关于右侧边栏的媒体查询
-  #ice-container .screen-outer {
-    .main .main-inner .col-right {
+  #ice-container .tbpc-layout .screen-outer {
+    .main .col-right {
       right: 1.6rem;
       top: unset;
       bottom: $tools_width * 2;
@@ -100,7 +100,6 @@
       border-radius: 50%;
       border: 2px solid $border_color;
       box-sizing: border-box;
-      z-index: 1001;
       background-color: $bg_color_2;
       &::before {
         display: none;

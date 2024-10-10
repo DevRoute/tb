@@ -22,7 +22,7 @@
         &.site-nav-menu-hover {
           .site-nav-menu-hd {
             border: 0;
-            background-color: $bg_color_1;
+            background-color: $bg_color_2;
           }
         }
         .site-nav-menu-hd {
@@ -31,8 +31,12 @@
         }
         .site-nav-menu-bd-panel {
           border: 0;
-          background-color: $bg_color_1;
-          transform: translateY(calc(5px - 100% - $topbar_height));
+          background-color: $bg_color_2;
+          transform: translateY(calc(2px - 100% - $topbar_height));
+          a {
+            color: $font_color;
+            background: transparent;
+          }
           .site-nav-region-item:hover,
           a:hover {
             background: get_bg_color(90%);
@@ -73,6 +77,7 @@
       }
     }
     .site-nav-menu-bd {
+      .site-nav-theme-more .text,
       .theme-title,
       .text {
         color: $font_color;
@@ -80,8 +85,7 @@
     }
   }
 }
-.site-nav.site-nav-status-login,
-.site-nav.site-nav-status-logout {
+.site-nav {
   &::after {
     content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
     color: get_font_color(30%);

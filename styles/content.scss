@@ -36,341 +36,353 @@
   & > .J_Module {
     display: none;
   }
-  // 默认搜索
-  & > .cup.search-fixed {
-    margin: unset;
-    width: $content_width;
-    border-radius: unset;
-    margin-top: calc($tab_title_height + 55px);
-    & > .top {
+  .tbpc-layout {
+    padding: unset;
+    max-width: unset;
+    min-width: unset;
+    // 默认搜索
+    .cup.search-fixed {
       margin: unset;
-      padding: unset;
-      min-height: 5.6rem;
-      height: auto;
-      // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
-      &::after {
-        content: "";
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: $topbar_height;
-        background-color: $bg_color_3;
-      }
-      .top-wrap {
-        width: inherit;
-        padding-top: 15px;
-        display: flex;
-        justify-content: center;
+      width: $content_width;
+      border-radius: unset;
+      margin-top: calc($tab_title_height + 55px);
+      & > .top {
+        margin: unset;
+        padding: unset;
+        min-height: 5.6rem;
         height: auto;
-        .tbh-logo-right,
-        a[class="logo"],
-        .tbh-logo {
-          display: none;
+        // 这个元素给滚动时遮挡搜索组件背景过渡的，这样不会太突兀
+        &::after {
+          content: "";
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: $topbar_height;
+          background-color: $bg_color_3;
         }
-        .tbh-search {
-          margin: auto;
-          width: 100%;
-          .search-wrap {
-            .search-suggest-menu-visiable {
-              form[name="search"] {
-                border: 1px solid $blue_border_color !important;
+        .top-wrap {
+          width: inherit;
+          padding-top: 15px;
+          display: flex;
+          justify-content: center;
+          height: auto;
+          .tbh-logo-right,
+          a[class="logo"],
+          .tbh-logo {
+            display: none;
+          }
+          .tbh-search {
+            margin: auto;
+            width: 100%;
+            .search-wrap {
+              .search-suggest-menu-visiable {
+                form[name="search"] {
+                  border: 1px solid $blue_border_color !important;
+                }
               }
-            }
-            #J_Search {
-              z-index: 200;
-              width: 35rem !important;
-              height: auto;
-              background-color: transparent;
-              border: unset;
-              left: calc(($content_width - 35rem) / 2) !important;
-              div[data-sg-type="tab"] {
-                border-radius: 8px 0 0 8px;
-                left: 2px;
+              #J_Search {
+                z-index: 200;
+                width: 35rem !important;
+                height: auto;
                 background-color: transparent;
-                ul.search-suggest-tabs {
-                  background-color: transparent;
+                border: unset;
+                left: calc(($content_width - 35rem) / 2) !important;
+                div[data-sg-type="tab"] {
                   border-radius: 8px 0 0 8px;
-                  li {
-                    color: black;
-                    background-color: #fff;
-                    &:first-child {
-                      [fill] {
-                        fill: $font_color;
+                  left: 2px;
+                  background-color: transparent;
+                  ul.search-suggest-tabs {
+                    background-color: transparent;
+                    border-radius: 8px 0 0 8px;
+                    li {
+                      color: black;
+                      background-color: #fff;
+                      &:first-child {
+                        color: get_font_color(30%);
+                        background-color: rgba(
+                          $color: $bg_color_3,
+                          $alpha: 0.7
+                        );
+                        margin-bottom: 1px;
+                        [fill] {
+                          fill: $font_color;
+                        }
                       }
-                      color: get_font_color(30%);
-                      background-color: rgba($color: $bg_color_3, $alpha: 0.7);
-                      margin-bottom: 1px;
                     }
                   }
                 }
-              }
-              form[name="search"] {
-                border: 1px solid rgba($color: #ccc, $alpha: 0.7);
-                border-radius: 12px;
-                height: 2.5rem;
-                div[data-sg-type="placeholder"] {
-                  transform: translateX(5px);
-                }
-                .search-suggest-combobox input {
-                  background-color: transparent;
-                  color: $font_color;
-                }
-                .search-button {
-                  .btn-search {
-                    top: 0;
-                    right: 0;
-                    height: 2.5rem;
-                    border-radius: 0 12px 12px 0;
+                form[name="search"] {
+                  border: 1px solid rgba($color: #ccc, $alpha: 0.7);
+                  border-radius: 12px;
+                  height: 2.5rem;
+                  div[data-sg-type="placeholder"] {
+                    transform: translateX(5px);
+                  }
+                  .search-suggest-combobox input {
+                    background-color: transparent;
+                    color: $font_color;
+                  }
+                  .search-button {
+                    .btn-search {
+                      top: 0;
+                      right: 0;
+                      height: 2.5rem;
+                      border-radius: 0 12px 12px 0;
+                    }
                   }
                 }
-              }
-              // 相机
-              .image-search-wrapper {
-                .image-search-icon {
-                  position: relative;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-image: inherit;
-                    background-size: cover;
-                    filter: invert(100%);
-                    pointer-events: none;
-                    z-index: -1;
+                // 相机
+                .image-search-wrapper {
+                  .image-search-icon {
+                    position: relative;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      background-image: inherit;
+                      background-size: cover;
+                      filter: invert(100%);
+                      pointer-events: none;
+                      z-index: -1;
+                    }
                   }
                 }
+                @include search_history_style;
               }
-              @include search_history_style;
             }
           }
         }
       }
     }
-  }
-  // 开始时搜索栏
-  & > .search-fixed.search-decorations {
-    background-color: transparent;
-    & > .top {
+    // 开始时搜索栏
+    .search-fixed.search-decorations {
       background-color: transparent;
-      .top-wrap {
-        padding-top: 15px;
-      }
-    }
-  }
-  & > .wrap-fixed.search-decorations {
-    background-color: transparent;
-  }
-  // 滚动时搜索栏
-  & > .wrap-fixed.search-decorations,
-  & > .cup.wrap-fixed {
-    z-index: 1002;
-    & > .top {
-      background-color: $bg_color_3;
-      height: $topbar_height;
-      padding: unset;
-      // border-bottom: 1px solid $border_color;
-      &::after {
-        @include logo_style;
-      }
-      .top-wrap {
-        div[data-name="search"] {
-          @include input_search_style;
-        }
-        .tbh-logo {
-          display: none;
+      & > .top {
+        background-color: transparent;
+        .top-wrap {
+          padding-top: 15px;
         }
       }
     }
-    // tab固定样式
-    + .screen-outer + .layer {
-      .smallTabListWrapper {
-        position: fixed;
-        top: $topbar_height !important;
-        left: calc($tools_width + var(--cate-width));
-        z-index: 1000;
-      }
+    .wrap-fixed.search-decorations {
+      background-color: transparent;
     }
-  }
-  // 分类这一行
-  & > .screen-outer {
-    height: 0;
-    padding-top: unset;
-    div[data-name="service"] {
-      .J_Service {
-        position: fixed;
-        top: $topbar_height;
-        left: $tools_width;
-        z-index: 220;
-        height: calc(100vh - $topbar_height - 30px);
-        max-height: unset;
-        background-color: $bg_color_2;
-        margin-left: unset;
-        border-radius: unset;
-        &::before {
-          content: "资源管理器";
-          display: flex;
-          align-items: center;
-          width: 100%;
-          height: $tab_title_height;
-          color: $font_color;
-          font-size: 16px;
-          padding: 0 0 0 30px;
-          box-sizing: border-box;
+    // 滚动时搜索栏
+    .wrap-fixed.search-decorations,
+    .cup.wrap-fixed {
+      position: relative;
+      z-index: 1002;
+      & > .top {
+        background-color: $bg_color_3;
+        height: $topbar_height;
+        padding: unset;
+        // border-bottom: 1px solid $border_color;
+        &::after {
+          @include logo_style;
         }
-        div[class^="cate-title"] {
-          padding: 0 16px;
-          background-color: get_bg_color(30%);
-          @include arrow_style;
-          span[class^="cate-title-txt"] {
-            color: $font_color;
-            &::before {
-              content: "产品";
-              display: inline-block;
-            }
+        .top-wrap {
+          div[data-name="search"] {
+            @include input_search_style;
           }
-          span[class^="cate-title-icon--"] {
+          .tbh-logo {
             display: none;
           }
         }
-        ul[class^="service-bd"] {
-          width: var(--cate-width);
+      }
+      // tab固定样式
+      + .screen-outer + .layer {
+        .smallTabListWrapper {
+          position: fixed;
+          top: $topbar_height !important;
+          left: calc($tools_width + var(--cate-width));
+          z-index: 1000;
+        }
+      }
+    }
+    // 分类这一行
+    .screen-outer {
+      height: 0;
+      padding-top: unset;
+      div[data-name="service"] {
+        .J_Service {
+          position: fixed;
+          top: $topbar_height;
+          left: $tools_width;
+          z-index: 220;
+          height: calc(100vh - $topbar_height - 30px);
+          max-height: unset;
           background-color: $bg_color_2;
-          position: relative;
-          overflow: auto;
-          height: calc(100vh - (($topbar_height * 5) - 30px));
-          li.J_Cat {
-            margin: unset;
-            padding-left: 16px;
-            height: auto;
+          margin-left: unset;
+          border-radius: unset;
+          &::before {
+            content: "资源管理器";
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            overflow-y: auto;
-            overflow-x: hidden;
-            @include arrow_up_style;
-            div[class^="first-cate-container"] {
+            width: 100%;
+            height: $tab_title_height;
+            color: $font_color;
+            font-size: 16px;
+            padding: 0 0 0 30px;
+            box-sizing: border-box;
+          }
+          div[class^="cate-title"] {
+            padding: 0 16px;
+            background-color: get_bg_color(30%);
+            @include arrow_style;
+            span[class^="cate-title-txt"] {
+              color: $font_color;
+              &::before {
+                content: "产品";
+                display: inline-block;
+              }
+            }
+            div[class^="cate-title-icon--"] {
+              display: none;
+            }
+          }
+          ul[class^="service-bd"] {
+            width: var(--cate-width);
+            background-color: $bg_color_2;
+            position: relative;
+            overflow: auto;
+            height: calc(100vh - (($topbar_height * 5) - 30px));
+            li.J_Cat {
+              margin: unset;
+              padding-left: 16px;
+              height: auto;
               display: flex;
+              flex-wrap: wrap;
               align-items: center;
-              width: calc($cate_width - 3rem); // 减去展开图标宽度
-              i {
-                display: none;
+              overflow-y: auto;
+              overflow-x: hidden;
+              @include arrow_up_style;
+              div[class^="first-cate-container"] {
+                display: flex;
+                align-items: center;
+                width: calc($cate_width - 3rem); // 减去展开图标宽度
+                i {
+                  display: none;
+                }
+                @include folder_icon_style;
+                // 分类文字
+                a[class^="cate-content-href"] {
+                  color: get_font_color(30%);
+                }
+                // 链接斜杆
+                span[class^="service-slash"] {
+                  color: get_font_color(30%);
+                }
               }
-              @include folder_icon_style;
-              // 分类文字
-              a[class^="cate-content-href"] {
-                color: get_font_color(30%);
-              }
-              // 链接斜杆
-              span[class^="service-slash"] {
-                color: get_font_color(30%);
-              }
-            }
-            &:hover {
-              background-color: $bg_color_2;
-              @include arrow_style;
-            }
-            $li_height: 32px;
-            // 悬停弹出分类这块
-            & > div[class^="sec-cate--"] {
-              position: unset;
-              padding-left: 1rem;
-              width: calc($cate_width - 1rem);
-              z-index: 230;
-              & > div[class^="sec-cate-container--"] {
-                width: calc(100% - 8px) !important;
+              &:hover {
                 background-color: $bg_color_2;
-                border: unset;
-                padding: unset;
-                & > div[class^="sec-cate-container-scroll--"] {
-                  overflow-x: hidden;
-                  max-height: calc(100vh - $tab_title_height - $topbar_height);
-                  & > div[class^="cate-links-container"] {
-                    // 标题字体
-                    [class^="sec-cate-title-container-a--"] {
-                      color: get_font_color(30%);
-                    }
-                    // 二级文件夹
-                    div[class^="sec-cate-item"] {
-                      height: $li_height;
-                      margin: unset;
-                      display: flex;
-                      align-items: center;
-                      @include arrow_up_style;
-                      a {
-                        position: unset;
+                @include arrow_style;
+              }
+              $li_height: 32px;
+              // 悬停弹出分类这块
+              & > div[class^="sec-cate--"] {
+                position: unset;
+                padding-left: 1rem;
+                width: calc($cate_width - 1rem);
+                z-index: 230;
+                & > div[class^="sec-cate-container--"] {
+                  width: calc(100% - 8px) !important;
+                  background-color: $bg_color_2;
+                  border: unset;
+                  padding: unset;
+                  & > div[class^="sec-cate-container-scroll--"] {
+                    overflow-x: hidden;
+                    max-height: calc(
+                      100vh - $tab_title_height - $topbar_height
+                    );
+                    & > div[class^="cate-links-container"] {
+                      // 标题字体
+                      [class^="sec-cate-title-container-a--"] {
+                        color: get_font_color(30%);
+                      }
+                      // 二级文件夹
+                      div[class^="sec-cate-item"] {
+                        height: $li_height;
+                        margin: unset;
                         display: flex;
                         align-items: center;
-                        @include folder_icon_style;
+                        @include arrow_up_style;
+                        a {
+                          position: unset;
+                          display: flex;
+                          align-items: center;
+                          @include folder_icon_style;
+                        }
+                        .tb-ifont {
+                          display: none;
+                        }
+                        &:hover {
+                          @include arrow_style;
+                          + div {
+                            display: flex;
+                          }
+                        }
                       }
-                      .tb-ifont {
+                      // 三级文件
+                      div[class^="sec-cate-content"] {
                         display: none;
-                      }
-                      &:hover {
-                        @include arrow_style;
-                        + div {
+                        margin: unset;
+                        padding-left: 1.37rem;
+                        flex-wrap: wrap;
+                        &:hover {
                           display: flex;
                         }
+                        a {
+                          width: calc(100% - 2rem);
+                          word-wrap: break-word;
+                          white-space: pre-wrap;
+                          display: flex;
+                          align-items: center;
+                          &:nth-child(4n) {
+                            @include file-icon($file_icon_html_url, "html");
+                          }
+                          &:nth-child(4n + 1) {
+                            @include file-icon($file_icon_md_url, "md");
+                          }
+                          &:nth-child(4n + 2) {
+                            @include file-icon($file_icon_exe_url, "exe");
+                          }
+                          &:nth-child(4n + 3) {
+                            @include file-icon($file_icon_js_url, "js");
+                          }
+                        }
                       }
                     }
-                    // 三级文件
-                    div[class^="sec-cate-content"] {
+                    & > [class^="venues-brands-container"] {
                       display: none;
-                      margin: unset;
-                      padding-left: 1.37rem;
-                      flex-wrap: wrap;
-                      &:hover {
-                        display: flex;
-                      }
-                      a {
-                        width: calc(100% - 2rem);
-                        word-wrap: break-word;
-                        white-space: pre-wrap;
-                        display: flex;
-                        align-items: center;
-                        &:nth-child(4n) {
-                          @include file-icon($file_icon_html_url, "html");
-                        }
-                        &:nth-child(4n + 1) {
-                          @include file-icon($file_icon_md_url, "md");
-                        }
-                        &:nth-child(4n + 2) {
-                          @include file-icon($file_icon_exe_url, "exe");
-                        }
-                        &:nth-child(4n + 3) {
-                          @include file-icon($file_icon_js_url, "js");
-                        }
-                      }
                     }
-                  }
-                  & > [class^="venues-brands-container"] {
-                    display: none;
                   }
                 }
               }
             }
-          }
-          // 链接字体
-          a {
-            color: get_font_color(30%);
-            &:hover {
-              color: var(--tbpc-primary-theme-color);
-            }
-            div[class^="brand--"]:hover {
-              background-color: var(--tbpc-bg2-color);
+            // 链接字体
+            a {
+              color: get_font_color(30%);
+              &:hover {
+                color: var(--tbpc-primary-theme-color);
+              }
+              div[class^="brand--"]:hover {
+                background-color: var(--tbpc-bg2-color);
+              }
             }
           }
         }
       }
-    }
-    // 登录这块
-    .main {
-      height: 0;
-      .main-inner {
+      .tbpc-row {
+        display: none;
+      }
+      // 登录这块
+      .main {
+        height: 0;
         .core.J_Core {
           height: 0;
           overflow: hidden;
@@ -429,111 +441,128 @@
         }
       }
     }
-  }
-  // 商品内容
-  & > .layer {
-    margin: unset;
-    width: $content_width;
-    overflow: hidden;
-    background-color: transparent;
-    &::before {
-      content: "淘宝网首页.md";
-      display: flex;
-      align-items: center;
-      width: 100px;
-      height: $tab_title_height;
-      padding-left: 30px;
-      position: fixed;
-      top: $topbar_height;
-      left: calc($tools_width + var(--cate-width));
-      color: $font_color;
-      font-style: italic;
-      z-index: 999;
-      background-color: $bg_color_1;
-      background-image: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01Fn6k111dMj9LMorPh_!!3558723722-2-tblife2_ugc.png");
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-      background-position: 5% 50%;
-    }
-    .layer-inner {
-      width: inherit;
+    // 商品内容
+    .layer {
+      margin: unset;
+      width: $content_width;
+      overflow: hidden;
       background-color: transparent;
-      .tb-picks-container {
+      &::before {
+        content: "淘宝网首页.md";
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: $tab_title_height;
+        padding-left: 30px;
+        position: fixed;
+        top: $topbar_height;
+        left: calc($tools_width + var(--cate-width));
+        color: $font_color;
+        font-style: italic;
+        z-index: 999;
+        background-color: $bg_color_1;
+        background-image: url("https://img.alicdn.com/imgextra/i2/3558723722/O1CN01Fn6k111dMj9LMorPh_!!3558723722-2-tblife2_ugc.png");
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+      }
+      .layer-inner {
         width: inherit;
-        margin-top: 10px;
-        // 商品标题
-        .smallTabListWrapper {
-          z-index: 210;
-          width: $content_width;
-          padding: unset;
-          height: $tab_title_height;
-          border-bottom: 1px solid $bg_color_2;
-          background-color: transparent;
-          .smallTabListInnerWrapper {
-            width: inherit;
-            .smallTabList {
-              padding: unset;
+        background-color: transparent;
+        .tb-picks-container {
+          width: inherit;
+          margin-top: 10px;
+          // 商品标题
+          .smallTabListWrapper {
+            z-index: 210;
+            width: $content_width;
+            margin: unset;
+            padding: unset;
+            height: $tab_title_height;
+            border-bottom: 1px solid $bg_color_2;
+            background-color: transparent;
+            .smallTabListInnerWrapper {
               width: inherit;
-              overflow-x: auto;
-              .smallTabWrapper {
-                height: inherit;
-                background-color: $bg_color_3;
-                padding: 0 15px;
-                margin: unset;
-                .smallTabTitle {
-                  color: get_font_color(30%);
-                }
-                // 选中的样式
-                &.smallTabWrapperSelected {
-                  background-color: $bg_color_1;
+              background: transparent;
+              .smallTabList {
+                padding: unset;
+                width: inherit;
+                overflow-x: auto;
+                .smallTabWrapper {
+                  height: inherit;
+                  background-color: $bg_color_3;
+                  padding: 0 15px;
+                  margin: unset;
                   .smallTabTitle {
-                    color: $font_color;
+                    color: get_font_color(30%);
                   }
-                  &::before {
-                    display: none;
+                  // 选中的样式
+                  &.smallTabWrapperSelected {
+                    background-color: $bg_color_1;
+                    .smallTabTitle {
+                      color: $font_color;
+                    }
+                    &::before {
+                      display: none;
+                    }
                   }
                 }
               }
             }
           }
-        }
-        // 商品列表
-        .tb-pick-feeds-container {
-          width: inherit;
-          display: flex;
-          flex-wrap: wrap;
-          padding: 5px 15px;
-          box-sizing: border-box;
-          gap: 16px;
-          .tb-pick-content-item {
-            float: unset;
-            flex: 1;
-            min-width: 200px;
-            max-width: 240px;
-            height: unset;
-            aspect-ratio: 1 / 1.47;
-            background-color: $bg_color_1;
-            border-radius: 15px;
-            border: 1px solid get_bg_color(30%);
-            margin: unset;
-            &:hover {
-              background-color: $bg_color_3;
-              transform: translateY(-15px);
-            }
-            a {
-              .img-wrapper {
-                width: inherit;
-                height: unset;
-                aspect-ratio: 1 / 1;
-                border-radius: 15px 15px 0 0;
-              }
-              .info-wrapper {
-                .info-wrapper-title-text {
-                  color: $font_color;
+          // 商品列表
+          .tb-pick-feeds-container .tbpc-row {
+            width: inherit;
+            max-width: unset !important;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px 15px;
+            box-sizing: border-box;
+            gap: 16px;
+            .tbpc-col {
+              float: unset;
+              flex: 1;
+              min-width: 200px;
+              max-width: 240px;
+              height: unset;
+              aspect-ratio: 1 / 1.47;
+              background-color: $bg_color_1;
+              border-radius: 15px;
+              border: 1px solid get_bg_color(30%);
+              margin: unset;
+              margin-top: 10px;
+              padding: unset;
+              transition: transform 0.3s;
+              .tb-pick-content-item {
+                border-radius: unset;
+                float: unset;
+                margin-bottom: unset;
+                background-color: transparent;
+                a {
+                  .img-wrapper {
+                    width: inherit;
+                    border-radius: 15px 15px 0 0;
+                  }
+                  .info-wrapper {
+                    .info-wrapper-title-text {
+                      color: $font_color;
+                    }
+                  }
+                  .info-wrapper,
+                  .tag-list,
+                  .price-wrapper {
+                    margin: 3px 0;
+                    padding: 0 5px;
+                    box-sizing: border-box;
+                  }
+                  .hover-border {
+                    display: none;
+                  }
                 }
               }
-              .hover-border {
-                display: none;
+              &:hover {
+                background-color: $bg_color_3;
+                transform: translateY(-15px);
               }
             }
           }
