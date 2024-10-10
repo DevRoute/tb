@@ -100,6 +100,9 @@
       }
 
       .search-suggest-menu-item {
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
         &:hover {
           background-color: $bg_color_3;
         }
@@ -113,9 +116,6 @@
           background-size: 100% 100%;
           margin-right: 5px;
         }
-        display: flex;
-        align-items: center;
-        padding-left: 5px;
         .item-wrapper {
           height: 32px;
           line-height: unset;
@@ -148,7 +148,7 @@
   }
   & > div[style*="block"] {
     height: 100%;
-    min-height: 12.8rem;
+    min-height: 10.8rem;
     &:hover {
       display: block !important;
     }
@@ -182,8 +182,9 @@
       // 开头搜索下拉框
       div[data-sg-type="tab"] {
         margin-top: unset;
-        height: $input_search_height - 2px;
+        height: $input_search_height;
         border-radius: 8px 0 0 8px;
+        // top: 1px;
         left: 2px;
         background-color: transparent;
         ul.search-suggest-tabs {
@@ -195,12 +196,13 @@
             height: $input_search_height;
             line-height: $input_search_height;
             &:first-child {
+              color: get_font_color(30%);
+              background-color: get_bg_color(15%);
+              margin-bottom: 3px;
+              border-radius: 8px 0 0 8px;
               [fill] {
                 fill: $font_color;
               }
-              color: get_font_color(30%);
-              background-color: rgba($color: $bg_color_1, $alpha: 0.7);
-              margin-bottom: 1px;
             }
             .search-tab-icon {
               top: 10px;
