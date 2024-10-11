@@ -1256,6 +1256,7 @@ body {
 }
 #ice-container .tbpc-layout .layer .layer-inner .tb-picks-container .tb-pick-feeds-container .tbpc-row {
   width: inherit;
+  margin: unset !important;
   max-width: unset !important;
   display: flex;
   flex-wrap: wrap;
@@ -1430,6 +1431,7 @@ div[data-spm=seoinject] {
     border: 2px solid #fff;
     box-sizing: border-box;
     background-color: #292929;
+    z-index: 1002;
   }
   #ice-container .tbpc-layout .screen-outer .main .col-right::before {
     display: none;
