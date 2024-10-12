@@ -73,7 +73,7 @@
       }
       // 回到顶部元素
       .toolkit-item.toolkit-item-back {
-        bottom: $topbar_height;
+        bottom: $topbar_height + $tools_theme_height;
         &::before {
           width: $tools_width;
           background-color: $bg_color_3;
