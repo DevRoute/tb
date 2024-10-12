@@ -9,7 +9,7 @@
       top: calc($topbar_height + $tools_item_height);
       // 回到顶部元素
       .tb-toolkit-list .toolkit-item.toolkit-item-back {
-        bottom: calc($tools_item_height + $topbar_height);
+        bottom: calc($tools_item_height + $topbar_height + $tools_theme_height);
       }
     }
   }

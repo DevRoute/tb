@@ -132,18 +132,66 @@ body {
 #J_SiteNav .site-nav-bd .site-nav-bd-r .site-nav-menu-hd a {
   float: unset;
 }
-#J_SiteNav .site-nav-bd .site-nav-menu-hd a,
-#J_SiteNav .site-nav-bd .site-nav-menu-hd .site-nav-theme {
+#J_SiteNav .site-nav-bd .site-nav-menu-hd a {
   color: #fff !important;
 }
-#J_SiteNav .site-nav-bd .site-nav-menu-bd .site-nav-theme-more .text,
+#J_SiteNav .site-nav-bd .site-nav-menu-bd .site-nav-theme-more,
 #J_SiteNav .site-nav-bd .site-nav-menu-bd .theme-title,
 #J_SiteNav .site-nav-bd .site-nav-menu-bd .text {
   color: #fff;
 }
+#J_SiteNav .site-nav-bd #J_SiteNavTheme.site-nav-menu-hover .site-nav-menu-hd .site-nav-theme {
+  color: #fff !important;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme.site-nav-menu-hover .site-nav-menu-hd::before {
+  filter: invert(100%);
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme {
+  float: unset;
+  width: 3.5rem;
+  height: 85px;
+  position: fixed;
+  left: 0;
+  bottom: 36px;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd {
+  padding: unset;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 70px;
+  padding-top: 10px;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01rZJVw41dMj9hqoI1J_!!3558723722-2-tblife2_ugc.png");
+  background-size: cover;
+  filter: invert(70%);
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd a,
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd .site-nav-theme {
+  color: #b3b3b3 !important;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd .site-nav-theme {
+  float: unset;
+  margin: 0;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-hd .site-nav-arrow {
+  display: none;
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-bd .site-nav-menu-bd-panel {
+  background-color: #1e1e1e;
+  transform: translate(3.5rem, -100%);
+}
+#J_SiteNav .site-nav-bd #J_SiteNavTheme .site-nav-menu-bd .site-nav-theme-more:hover .text {
+  color: #1a1a1a;
+}
 
 .site-nav::after {
-  content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
+  content: "淘宝网首页.md -- 欢迎来到淘宝网之代码版";
   color: #b3b3b3;
 }
 .site-nav::before {
@@ -224,7 +272,7 @@ body {
   color: #fff;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back {
-  bottom: 36px;
+  bottom: 121px;
 }
 #J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back::before {
   width: 3.5rem;
@@ -1351,7 +1399,7 @@ div[data-spm=seoinject] {
     top: calc(36px + 3.2rem);
   }
   #J_Toolkit .tb-toolkit .tb-toolkit-list .toolkit-item.toolkit-item-back {
-    bottom: calc(3.2rem + 36px);
+    bottom: calc(3.2rem + 36px + 85px);
   }
   #ice-container .tbpc-layout .screen-outer div[data-name=service] .J_Service {
     position: fixed;

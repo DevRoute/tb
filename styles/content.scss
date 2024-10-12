@@ -11,7 +11,6 @@
     left: calc($tools_width + var(--cate-width));
     top: calc($tab_title_height + $topbar_height);
     width: calc(100vw - $tools_width - var(--cate-width));
-    // height: calc(100vh - $tab_title_height - $topbar_height);
     height: 5.7rem;
     background: linear-gradient(to bottom, #19324b 10%, $bg_color_1 90%);
   }
@@ -181,7 +180,6 @@
         background-color: $bg_color_3;
         height: $topbar_height;
         padding: unset;
-        // border-bottom: 1px solid $border_color;
         &::after {
           @include logo_style;
         }

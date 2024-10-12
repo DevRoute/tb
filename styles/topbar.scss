@@ -71,23 +71,77 @@
       }
     }
     .site-nav-menu-hd {
-      a,
-      .site-nav-theme {
+      a {
         color: $font_color !important;
       }
     }
     .site-nav-menu-bd {
-      .site-nav-theme-more .text,
+      .site-nav-theme-more,
       .theme-title,
       .text {
         color: $font_color;
+      }
+    }
+    // 切换主题
+    #J_SiteNavTheme.site-nav-menu-hover .site-nav-menu-hd {
+      // background-color: transparent !important;
+      .site-nav-theme {
+        color: $font_color !important;
+      }
+      &::before {
+        filter: invert(100%);
+      }
+    }
+    #J_SiteNavTheme {
+      float: unset;
+      width: $tools_width;
+      height: $tools_theme_height;
+      position: fixed;
+      left: 0;
+      bottom: $topbar_height;
+      .site-nav-menu-hd {
+        padding: unset;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 70px;
+        padding-top: 10px;
+        &::before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 24px;
+          background-image: url("https://img.alicdn.com/imgextra/i1/3558723722/O1CN01rZJVw41dMj9hqoI1J_!!3558723722-2-tblife2_ugc.png");
+          background-size: cover;
+          filter: invert(70%);
+        }
+        a,
+        .site-nav-theme {
+          color: get_font_color(30%) !important;
+        }
+        .site-nav-theme {
+          float: unset;
+          margin: 0;
+        }
+        .site-nav-arrow {
+          display: none;
+        }
+      }
+      .site-nav-menu-bd {
+        .site-nav-menu-bd-panel {
+          background-color: $bg_color_1;
+          transform: translate($tools_width, -100%);
+        }
+        .site-nav-theme-more:hover .text {
+          color: get_font_color(90%);
+        }
       }
     }
   }
 }
 .site-nav {
   &::after {
-    content: "淘宝网首页.md -- 欢迎来到淘宝网之VScode版";
+    content: "淘宝网首页.md -- 欢迎来到淘宝网之代码版";
     color: get_font_color(30%);
   }
   &::before {
